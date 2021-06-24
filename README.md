@@ -21,7 +21,7 @@ steps:
 
 Configure the pipeline trigger as below, entering your org/repo in the `repository` key:
 
-![Spinnaker Automated Trigger](docs/assets/spinnaker_automated_trigger.png)
+![Spinnaker Automated Trigger](docs/assets/spinnaker-automated-trigger.png)
 
 ### Default Parameters
 
