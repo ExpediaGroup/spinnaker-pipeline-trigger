@@ -1,0 +1,20 @@
+name: "spinnaker-pipeline-trigger"
+description: "Triggers Spinnaker pipelines using AWS SNS"
+author: "ExpediaGroup"
+inputs:
+  topic_arn:
+    description: Topic ARN
+    required: true
+  parameters:
+    description: Parameters passed to pipeline execution.
+    required: false
+  message_attributes:
+    description: Message attributes passed to pipeline execution.
+    required: false
+  aws_region:
+    description: AWS Region
+    required: false
+    default: us-west-2
+runs:
+  using: "node12"
+  main: "dist/index.js"
