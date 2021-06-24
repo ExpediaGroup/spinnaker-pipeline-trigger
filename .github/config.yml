@@ -1,0 +1,38 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: [bug, triage]
+assignees:
+  - mcaulifn
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+      description: Please describe the actual outcome. Include a link to the workflow run if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What was expected?
+      description: Please describe what was expected to happen.
+    validations:
+      required: false
+  - type: textarea
+    id: config
+    attributes:
+      label: Workflow config
+      description: Please include workflow config that generated the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
