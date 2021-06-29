@@ -84,6 +84,10 @@ Sample message format based on the default parameters being sent:
 ]
 ```
 
+## License
+
+The scripts and documentation in this project are released under the [Apache 2 License](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/blob/main/LICENSE).
+
 ## Contributions
 
 - Run `yarn all` locally before committing.
