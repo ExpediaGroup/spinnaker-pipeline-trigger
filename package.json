@@ -31,7 +31,7 @@
     "license": "MIT",
     "dependencies": {
         "@actions/core": "1.4.0",
-        "@aws-sdk/client-sns": "3.18.0",
+        "@aws-sdk/client-sns": "3.19.0",
         "@types/js-yaml": "^4.0.1",
         "@types/node": "15.12.4",
         "js-yaml": "^4.1.0"
@@ -41,7 +41,7 @@
         "@types/mock-fs": "4.13.0",
         "@types/source-map-support": "0.5.3",
         "@typescript-eslint/eslint-plugin": "4.28.0",
-        "@typescript-eslint/parser": "4.28.0",
+        "@typescript-eslint/parser": "4.28.1",
         "@vercel/ncc": "0.28.6",
         "eslint": "7.29.0",
         "eslint-plugin-github": "4.1.3",
