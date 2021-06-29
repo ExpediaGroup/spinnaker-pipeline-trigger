@@ -48,7 +48,7 @@
         "eslint-plugin-jest": "24.3.6",
         "eslint-plugin-prettier": "3.4.0",
         "jest": "27.0.5",
-        "jest-circus": "27.0.5",
+        "jest-circus": "27.0.6",
         "mock-fs": "5.0.0",
         "nyc": "15.1.0",
         "onchange": "7.1.0",
