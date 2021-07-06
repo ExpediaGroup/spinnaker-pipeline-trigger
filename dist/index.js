@@ -5,7 +5,7 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sns","description":"AWS SDK for JavaScript Sns Client for Node.js, Browser and React Native","version":"3.19.0","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/client-sts":"3.19.0","@aws-sdk/config-resolver":"3.19.0","@aws-sdk/credential-provider-node":"3.19.0","@aws-sdk/fetch-http-handler":"3.18.0","@aws-sdk/hash-node":"3.18.0","@aws-sdk/invalid-dependency":"3.18.0","@aws-sdk/middleware-content-length":"3.18.0","@aws-sdk/middleware-host-header":"3.18.0","@aws-sdk/middleware-logger":"3.18.0","@aws-sdk/middleware-retry":"3.19.0","@aws-sdk/middleware-serde":"3.18.0","@aws-sdk/middleware-signing":"3.19.0","@aws-sdk/middleware-stack":"3.18.0","@aws-sdk/middleware-user-agent":"3.18.0","@aws-sdk/node-config-provider":"3.19.0","@aws-sdk/node-http-handler":"3.18.0","@aws-sdk/protocol-http":"3.18.0","@aws-sdk/smithy-client":"3.19.0","@aws-sdk/types":"3.18.0","@aws-sdk/url-parser":"3.18.0","@aws-sdk/util-base64-browser":"3.18.0","@aws-sdk/util-base64-node":"3.18.0","@aws-sdk/util-body-length-browser":"3.18.0","@aws-sdk/util-body-length-node":"3.18.0","@aws-sdk/util-user-agent-browser":"3.18.0","@aws-sdk/util-user-agent-node":"3.19.0","@aws-sdk/util-utf8-browser":"3.18.0","@aws-sdk/util-utf8-node":"3.18.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.18.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.2"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sns","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sns"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sns","description":"AWS SDK for JavaScript Sns Client for Node.js, Browser and React Native","version":"3.20.0","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es","downlevel-dts":"downlevel-dts dist/types dist/types/ts3.4"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/client-sts":"3.20.0","@aws-sdk/config-resolver":"3.20.0","@aws-sdk/credential-provider-node":"3.20.0","@aws-sdk/fetch-http-handler":"3.20.0","@aws-sdk/hash-node":"3.20.0","@aws-sdk/invalid-dependency":"3.20.0","@aws-sdk/middleware-content-length":"3.20.0","@aws-sdk/middleware-host-header":"3.20.0","@aws-sdk/middleware-logger":"3.20.0","@aws-sdk/middleware-retry":"3.20.0","@aws-sdk/middleware-serde":"3.20.0","@aws-sdk/middleware-signing":"3.20.0","@aws-sdk/middleware-stack":"3.20.0","@aws-sdk/middleware-user-agent":"3.20.0","@aws-sdk/node-config-provider":"3.20.0","@aws-sdk/node-http-handler":"3.20.0","@aws-sdk/protocol-http":"3.20.0","@aws-sdk/smithy-client":"3.20.0","@aws-sdk/types":"3.20.0","@aws-sdk/url-parser":"3.20.0","@aws-sdk/util-base64-browser":"3.20.0","@aws-sdk/util-base64-node":"3.20.0","@aws-sdk/util-body-length-browser":"3.20.0","@aws-sdk/util-body-length-node":"3.20.0","@aws-sdk/util-user-agent-browser":"3.20.0","@aws-sdk/util-user-agent-node":"3.20.0","@aws-sdk/util-utf8-browser":"3.20.0","@aws-sdk/util-utf8-node":"3.20.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.20.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.2"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sns","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sns"}}');
 
 /***/ }),
 
@@ -13,7 +13,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sns","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.19.0","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/config-resolver":"3.19.0","@aws-sdk/fetch-http-handler":"3.18.0","@aws-sdk/hash-node":"3.18.0","@aws-sdk/invalid-dependency":"3.18.0","@aws-sdk/middleware-content-length":"3.18.0","@aws-sdk/middleware-host-header":"3.18.0","@aws-sdk/middleware-logger":"3.18.0","@aws-sdk/middleware-retry":"3.19.0","@aws-sdk/middleware-serde":"3.18.0","@aws-sdk/middleware-stack":"3.18.0","@aws-sdk/middleware-user-agent":"3.18.0","@aws-sdk/node-config-provider":"3.19.0","@aws-sdk/node-http-handler":"3.18.0","@aws-sdk/protocol-http":"3.18.0","@aws-sdk/smithy-client":"3.19.0","@aws-sdk/types":"3.18.0","@aws-sdk/url-parser":"3.18.0","@aws-sdk/util-base64-browser":"3.18.0","@aws-sdk/util-base64-node":"3.18.0","@aws-sdk/util-body-length-browser":"3.18.0","@aws-sdk/util-body-length-node":"3.18.0","@aws-sdk/util-user-agent-browser":"3.18.0","@aws-sdk/util-user-agent-node":"3.19.0","@aws-sdk/util-utf8-browser":"3.18.0","@aws-sdk/util-utf8-node":"3.18.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.18.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.2"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.20.0","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es","downlevel-dts":"downlevel-dts dist/types dist/types/ts3.4"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/config-resolver":"3.20.0","@aws-sdk/fetch-http-handler":"3.20.0","@aws-sdk/hash-node":"3.20.0","@aws-sdk/invalid-dependency":"3.20.0","@aws-sdk/middleware-content-length":"3.20.0","@aws-sdk/middleware-host-header":"3.20.0","@aws-sdk/middleware-logger":"3.20.0","@aws-sdk/middleware-retry":"3.20.0","@aws-sdk/middleware-serde":"3.20.0","@aws-sdk/middleware-stack":"3.20.0","@aws-sdk/middleware-user-agent":"3.20.0","@aws-sdk/node-config-provider":"3.20.0","@aws-sdk/node-http-handler":"3.20.0","@aws-sdk/protocol-http":"3.20.0","@aws-sdk/smithy-client":"3.20.0","@aws-sdk/types":"3.20.0","@aws-sdk/url-parser":"3.20.0","@aws-sdk/util-base64-browser":"3.20.0","@aws-sdk/util-base64-node":"3.20.0","@aws-sdk/util-body-length-browser":"3.20.0","@aws-sdk/util-body-length-node":"3.20.0","@aws-sdk/util-user-agent-browser":"3.20.0","@aws-sdk/util-user-agent-node":"3.20.0","@aws-sdk/util-utf8-browser":"3.20.0","@aws-sdk/util-utf8-node":"3.20.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.20.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.2"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -21,7 +21,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.19.0","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","prepublishOnly":"yarn build && downlevel-dts dist/types dist/types/ts3.4","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/config-resolver":"3.19.0","@aws-sdk/credential-provider-node":"3.19.0","@aws-sdk/fetch-http-handler":"3.18.0","@aws-sdk/hash-node":"3.18.0","@aws-sdk/invalid-dependency":"3.18.0","@aws-sdk/middleware-content-length":"3.18.0","@aws-sdk/middleware-host-header":"3.18.0","@aws-sdk/middleware-logger":"3.18.0","@aws-sdk/middleware-retry":"3.19.0","@aws-sdk/middleware-sdk-sts":"3.19.0","@aws-sdk/middleware-serde":"3.18.0","@aws-sdk/middleware-signing":"3.19.0","@aws-sdk/middleware-stack":"3.18.0","@aws-sdk/middleware-user-agent":"3.18.0","@aws-sdk/node-config-provider":"3.19.0","@aws-sdk/node-http-handler":"3.18.0","@aws-sdk/protocol-http":"3.18.0","@aws-sdk/smithy-client":"3.19.0","@aws-sdk/types":"3.18.0","@aws-sdk/url-parser":"3.18.0","@aws-sdk/util-base64-browser":"3.18.0","@aws-sdk/util-base64-node":"3.18.0","@aws-sdk/util-body-length-browser":"3.18.0","@aws-sdk/util-body-length-node":"3.18.0","@aws-sdk/util-user-agent-browser":"3.18.0","@aws-sdk/util-user-agent-node":"3.19.0","@aws-sdk/util-utf8-browser":"3.18.0","@aws-sdk/util-utf8-node":"3.18.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.18.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.2"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.20.0","scripts":{"clean":"yarn remove-definitions && yarn remove-dist && yarn remove-documentation","build-documentation":"yarn remove-documentation && typedoc ./","remove-definitions":"rimraf ./types","remove-dist":"rimraf ./dist","remove-documentation":"rimraf ./docs","test":"exit 0","build:cjs":"tsc -p tsconfig.json","build:es":"tsc -p tsconfig.es.json","build":"yarn build:cjs && yarn build:es","downlevel-dts":"downlevel-dts dist/types dist/types/ts3.4"},"main":"./dist/cjs/index.js","types":"./dist/types/index.d.ts","module":"./dist/es/index.js","browser":{"./runtimeConfig":"./runtimeConfig.browser"},"react-native":{"./runtimeConfig":"./runtimeConfig.native"},"sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"^1.0.0","@aws-crypto/sha256-js":"^1.0.0","@aws-sdk/config-resolver":"3.20.0","@aws-sdk/credential-provider-node":"3.20.0","@aws-sdk/fetch-http-handler":"3.20.0","@aws-sdk/hash-node":"3.20.0","@aws-sdk/invalid-dependency":"3.20.0","@aws-sdk/middleware-content-length":"3.20.0","@aws-sdk/middleware-host-header":"3.20.0","@aws-sdk/middleware-logger":"3.20.0","@aws-sdk/middleware-retry":"3.20.0","@aws-sdk/middleware-sdk-sts":"3.20.0","@aws-sdk/middleware-serde":"3.20.0","@aws-sdk/middleware-signing":"3.20.0","@aws-sdk/middleware-stack":"3.20.0","@aws-sdk/middleware-user-agent":"3.20.0","@aws-sdk/node-config-provider":"3.20.0","@aws-sdk/node-http-handler":"3.20.0","@aws-sdk/protocol-http":"3.20.0","@aws-sdk/smithy-client":"3.20.0","@aws-sdk/types":"3.20.0","@aws-sdk/url-parser":"3.20.0","@aws-sdk/util-base64-browser":"3.20.0","@aws-sdk/util-base64-node":"3.20.0","@aws-sdk/util-body-length-browser":"3.20.0","@aws-sdk/util-body-length-node":"3.20.0","@aws-sdk/util-user-agent-browser":"3.20.0","@aws-sdk/util-user-agent-node":"3.20.0","@aws-sdk/util-utf8-browser":"3.20.0","@aws-sdk/util-utf8-node":"3.20.0","entities":"2.2.0","fast-xml-parser":"3.19.0","tslib":"^2.0.0"},"devDependencies":{"@aws-sdk/client-documentation-generator":"3.20.0","@types/node":"^12.7.5","downlevel-dts":"0.7.0","jest":"^26.1.0","rimraf":"^3.0.0","ts-jest":"^26.4.1","typedoc":"^0.19.2","typescript":"~4.3.2"},"engines":{"node":">=10.0.0"},"typesVersions":{"<4.0":{"types/*":["types/ts3.4/*"]}},"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
@@ -10308,7 +10308,7 @@ const deserializeAws_queryAuthorizationErrorException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10317,7 +10317,7 @@ const deserializeAws_queryCheckIfPhoneNumberIsOptedOutResponse = (output, contex
         isOptedOut: undefined,
     };
     if (output["isOptedOut"] !== undefined) {
-        contents.isOptedOut = output["isOptedOut"] == "true";
+        contents.isOptedOut = smithy_client_1.parseBoolean(output["isOptedOut"]);
     }
     return contents;
 };
@@ -10326,7 +10326,7 @@ const deserializeAws_queryConcurrentAccessException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10335,7 +10335,7 @@ const deserializeAws_queryConfirmSubscriptionResponse = (output, context) => {
         SubscriptionArn: undefined,
     };
     if (output["SubscriptionArn"] !== undefined) {
-        contents.SubscriptionArn = output["SubscriptionArn"];
+        contents.SubscriptionArn = smithy_client_1.expectString(output["SubscriptionArn"]);
     }
     return contents;
 };
@@ -10344,7 +10344,7 @@ const deserializeAws_queryCreateEndpointResponse = (output, context) => {
         EndpointArn: undefined,
     };
     if (output["EndpointArn"] !== undefined) {
-        contents.EndpointArn = output["EndpointArn"];
+        contents.EndpointArn = smithy_client_1.expectString(output["EndpointArn"]);
     }
     return contents;
 };
@@ -10353,7 +10353,7 @@ const deserializeAws_queryCreatePlatformApplicationResponse = (output, context) 
         PlatformApplicationArn: undefined,
     };
     if (output["PlatformApplicationArn"] !== undefined) {
-        contents.PlatformApplicationArn = output["PlatformApplicationArn"];
+        contents.PlatformApplicationArn = smithy_client_1.expectString(output["PlatformApplicationArn"]);
     }
     return contents;
 };
@@ -10366,7 +10366,7 @@ const deserializeAws_queryCreateTopicResponse = (output, context) => {
         TopicArn: undefined,
     };
     if (output["TopicArn"] !== undefined) {
-        contents.TopicArn = output["TopicArn"];
+        contents.TopicArn = smithy_client_1.expectString(output["TopicArn"]);
     }
     return contents;
 };
@@ -10380,7 +10380,7 @@ const deserializeAws_queryEndpoint = (output, context) => {
         Attributes: undefined,
     };
     if (output["EndpointArn"] !== undefined) {
-        contents.EndpointArn = output["EndpointArn"];
+        contents.EndpointArn = smithy_client_1.expectString(output["EndpointArn"]);
     }
     if (output.Attributes === "") {
         contents.Attributes = {};
@@ -10395,7 +10395,7 @@ const deserializeAws_queryEndpointDisabledException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10404,7 +10404,7 @@ const deserializeAws_queryFilterPolicyLimitExceededException = (output, context)
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10449,7 +10449,7 @@ const deserializeAws_queryGetSMSSandboxAccountStatusResult = (output, context) =
         IsInSandbox: undefined,
     };
     if (output["IsInSandbox"] !== undefined) {
-        contents.IsInSandbox = output["IsInSandbox"] == "true";
+        contents.IsInSandbox = smithy_client_1.parseBoolean(output["IsInSandbox"]);
     }
     return contents;
 };
@@ -10482,7 +10482,7 @@ const deserializeAws_queryInternalErrorException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10491,7 +10491,7 @@ const deserializeAws_queryInvalidParameterException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10500,7 +10500,7 @@ const deserializeAws_queryInvalidParameterValueException = (output, context) => 
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10509,7 +10509,7 @@ const deserializeAws_queryInvalidSecurityException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10518,7 +10518,7 @@ const deserializeAws_queryKMSAccessDeniedException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10527,7 +10527,7 @@ const deserializeAws_queryKMSDisabledException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10536,7 +10536,7 @@ const deserializeAws_queryKMSInvalidStateException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10545,7 +10545,7 @@ const deserializeAws_queryKMSNotFoundException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10554,7 +10554,7 @@ const deserializeAws_queryKMSOptInRequired = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10563,7 +10563,7 @@ const deserializeAws_queryKMSThrottlingException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10579,7 +10579,7 @@ const deserializeAws_queryListEndpointsByPlatformApplicationResponse = (output, 
         contents.Endpoints = deserializeAws_queryListOfEndpoints(smithy_client_1.getArrayIfSingleItem(output["Endpoints"]["member"]), context);
     }
     if (output["NextToken"] !== undefined) {
-        contents.NextToken = output["NextToken"];
+        contents.NextToken = smithy_client_1.expectString(output["NextToken"]);
     }
     return contents;
 };
@@ -10609,7 +10609,7 @@ const deserializeAws_queryListOriginationNumbersResult = (output, context) => {
         PhoneNumbers: undefined,
     };
     if (output["NextToken"] !== undefined) {
-        contents.NextToken = output["NextToken"];
+        contents.NextToken = smithy_client_1.expectString(output["NextToken"]);
     }
     if (output.PhoneNumbers === "") {
         contents.PhoneNumbers = [];
@@ -10631,7 +10631,7 @@ const deserializeAws_queryListPhoneNumbersOptedOutResponse = (output, context) =
         contents.phoneNumbers = deserializeAws_queryPhoneNumberList(smithy_client_1.getArrayIfSingleItem(output["phoneNumbers"]["member"]), context);
     }
     if (output["nextToken"] !== undefined) {
-        contents.nextToken = output["nextToken"];
+        contents.nextToken = smithy_client_1.expectString(output["nextToken"]);
     }
     return contents;
 };
@@ -10647,7 +10647,7 @@ const deserializeAws_queryListPlatformApplicationsResponse = (output, context) =
         contents.PlatformApplications = deserializeAws_queryListOfPlatformApplications(smithy_client_1.getArrayIfSingleItem(output["PlatformApplications"]["member"]), context);
     }
     if (output["NextToken"] !== undefined) {
-        contents.NextToken = output["NextToken"];
+        contents.NextToken = smithy_client_1.expectString(output["NextToken"]);
     }
     return contents;
 };
@@ -10663,7 +10663,7 @@ const deserializeAws_queryListSMSSandboxPhoneNumbersResult = (output, context) =
         contents.PhoneNumbers = deserializeAws_querySMSSandboxPhoneNumberList(smithy_client_1.getArrayIfSingleItem(output["PhoneNumbers"]["member"]), context);
     }
     if (output["NextToken"] !== undefined) {
-        contents.NextToken = output["NextToken"];
+        contents.NextToken = smithy_client_1.expectString(output["NextToken"]);
     }
     return contents;
 };
@@ -10679,7 +10679,7 @@ const deserializeAws_queryListSubscriptionsByTopicResponse = (output, context) =
         contents.Subscriptions = deserializeAws_querySubscriptionsList(smithy_client_1.getArrayIfSingleItem(output["Subscriptions"]["member"]), context);
     }
     if (output["NextToken"] !== undefined) {
-        contents.NextToken = output["NextToken"];
+        contents.NextToken = smithy_client_1.expectString(output["NextToken"]);
     }
     return contents;
 };
@@ -10695,7 +10695,7 @@ const deserializeAws_queryListSubscriptionsResponse = (output, context) => {
         contents.Subscriptions = deserializeAws_querySubscriptionsList(smithy_client_1.getArrayIfSingleItem(output["Subscriptions"]["member"]), context);
     }
     if (output["NextToken"] !== undefined) {
-        contents.NextToken = output["NextToken"];
+        contents.NextToken = smithy_client_1.expectString(output["NextToken"]);
     }
     return contents;
 };
@@ -10723,7 +10723,7 @@ const deserializeAws_queryListTopicsResponse = (output, context) => {
         contents.Topics = deserializeAws_queryTopicsList(smithy_client_1.getArrayIfSingleItem(output["Topics"]["member"]), context);
     }
     if (output["NextToken"] !== undefined) {
-        contents.NextToken = output["NextToken"];
+        contents.NextToken = smithy_client_1.expectString(output["NextToken"]);
     }
     return contents;
 };
@@ -10734,7 +10734,7 @@ const deserializeAws_queryMapStringToString = (output, context) => {
         }
         return {
             ...acc,
-            [pair["key"]]: pair["value"],
+            [pair["key"]]: smithy_client_1.expectString(pair["value"]),
         };
     }, {});
 };
@@ -10743,7 +10743,7 @@ const deserializeAws_queryNotFoundException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10754,7 +10754,7 @@ const deserializeAws_queryNumberCapabilityList = (output, context) => {
         if (entry === null) {
             return null;
         }
-        return entry;
+        return smithy_client_1.expectString(entry);
     });
 };
 const deserializeAws_queryOptedOutException = (output, context) => {
@@ -10762,7 +10762,7 @@ const deserializeAws_queryOptedOutException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10783,16 +10783,16 @@ const deserializeAws_queryPhoneNumberInformation = (output, context) => {
         contents.CreatedAt = new Date(output["CreatedAt"]);
     }
     if (output["PhoneNumber"] !== undefined) {
-        contents.PhoneNumber = output["PhoneNumber"];
+        contents.PhoneNumber = smithy_client_1.expectString(output["PhoneNumber"]);
     }
     if (output["Status"] !== undefined) {
-        contents.Status = output["Status"];
+        contents.Status = smithy_client_1.expectString(output["Status"]);
     }
     if (output["Iso2CountryCode"] !== undefined) {
-        contents.Iso2CountryCode = output["Iso2CountryCode"];
+        contents.Iso2CountryCode = smithy_client_1.expectString(output["Iso2CountryCode"]);
     }
     if (output["RouteType"] !== undefined) {
-        contents.RouteType = output["RouteType"];
+        contents.RouteType = smithy_client_1.expectString(output["RouteType"]);
     }
     if (output.NumberCapabilities === "") {
         contents.NumberCapabilities = [];
@@ -10819,7 +10819,7 @@ const deserializeAws_queryPhoneNumberList = (output, context) => {
         if (entry === null) {
             return null;
         }
-        return entry;
+        return smithy_client_1.expectString(entry);
     });
 };
 const deserializeAws_queryPlatformApplication = (output, context) => {
@@ -10828,7 +10828,7 @@ const deserializeAws_queryPlatformApplication = (output, context) => {
         Attributes: undefined,
     };
     if (output["PlatformApplicationArn"] !== undefined) {
-        contents.PlatformApplicationArn = output["PlatformApplicationArn"];
+        contents.PlatformApplicationArn = smithy_client_1.expectString(output["PlatformApplicationArn"]);
     }
     if (output.Attributes === "") {
         contents.Attributes = {};
@@ -10843,7 +10843,7 @@ const deserializeAws_queryPlatformApplicationDisabledException = (output, contex
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10853,10 +10853,10 @@ const deserializeAws_queryPublishResponse = (output, context) => {
         SequenceNumber: undefined,
     };
     if (output["MessageId"] !== undefined) {
-        contents.MessageId = output["MessageId"];
+        contents.MessageId = smithy_client_1.expectString(output["MessageId"]);
     }
     if (output["SequenceNumber"] !== undefined) {
-        contents.SequenceNumber = output["SequenceNumber"];
+        contents.SequenceNumber = smithy_client_1.expectString(output["SequenceNumber"]);
     }
     return contents;
 };
@@ -10865,7 +10865,7 @@ const deserializeAws_queryResourceNotFoundException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10879,10 +10879,10 @@ const deserializeAws_querySMSSandboxPhoneNumber = (output, context) => {
         Status: undefined,
     };
     if (output["PhoneNumber"] !== undefined) {
-        contents.PhoneNumber = output["PhoneNumber"];
+        contents.PhoneNumber = smithy_client_1.expectString(output["PhoneNumber"]);
     }
     if (output["Status"] !== undefined) {
-        contents.Status = output["Status"];
+        contents.Status = smithy_client_1.expectString(output["Status"]);
     }
     return contents;
 };
@@ -10901,7 +10901,7 @@ const deserializeAws_queryStaleTagException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10910,7 +10910,7 @@ const deserializeAws_querySubscribeResponse = (output, context) => {
         SubscriptionArn: undefined,
     };
     if (output["SubscriptionArn"] !== undefined) {
-        contents.SubscriptionArn = output["SubscriptionArn"];
+        contents.SubscriptionArn = smithy_client_1.expectString(output["SubscriptionArn"]);
     }
     return contents;
 };
@@ -10923,19 +10923,19 @@ const deserializeAws_querySubscription = (output, context) => {
         TopicArn: undefined,
     };
     if (output["SubscriptionArn"] !== undefined) {
-        contents.SubscriptionArn = output["SubscriptionArn"];
+        contents.SubscriptionArn = smithy_client_1.expectString(output["SubscriptionArn"]);
     }
     if (output["Owner"] !== undefined) {
-        contents.Owner = output["Owner"];
+        contents.Owner = smithy_client_1.expectString(output["Owner"]);
     }
     if (output["Protocol"] !== undefined) {
-        contents.Protocol = output["Protocol"];
+        contents.Protocol = smithy_client_1.expectString(output["Protocol"]);
     }
     if (output["Endpoint"] !== undefined) {
-        contents.Endpoint = output["Endpoint"];
+        contents.Endpoint = smithy_client_1.expectString(output["Endpoint"]);
     }
     if (output["TopicArn"] !== undefined) {
-        contents.TopicArn = output["TopicArn"];
+        contents.TopicArn = smithy_client_1.expectString(output["TopicArn"]);
     }
     return contents;
 };
@@ -10946,7 +10946,7 @@ const deserializeAws_querySubscriptionAttributesMap = (output, context) => {
         }
         return {
             ...acc,
-            [pair["key"]]: pair["value"],
+            [pair["key"]]: smithy_client_1.expectString(pair["value"]),
         };
     }, {});
 };
@@ -10955,7 +10955,7 @@ const deserializeAws_querySubscriptionLimitExceededException = (output, context)
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -10975,10 +10975,10 @@ const deserializeAws_queryTag = (output, context) => {
         Value: undefined,
     };
     if (output["Key"] !== undefined) {
-        contents.Key = output["Key"];
+        contents.Key = smithy_client_1.expectString(output["Key"]);
     }
     if (output["Value"] !== undefined) {
-        contents.Value = output["Value"];
+        contents.Value = smithy_client_1.expectString(output["Value"]);
     }
     return contents;
 };
@@ -10987,7 +10987,7 @@ const deserializeAws_queryTagLimitExceededException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -11006,7 +11006,7 @@ const deserializeAws_queryTagPolicyException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -11019,7 +11019,7 @@ const deserializeAws_queryThrottledException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -11028,7 +11028,7 @@ const deserializeAws_queryTopic = (output, context) => {
         TopicArn: undefined,
     };
     if (output["TopicArn"] !== undefined) {
-        contents.TopicArn = output["TopicArn"];
+        contents.TopicArn = smithy_client_1.expectString(output["TopicArn"]);
     }
     return contents;
 };
@@ -11039,7 +11039,7 @@ const deserializeAws_queryTopicAttributesMap = (output, context) => {
         }
         return {
             ...acc,
-            [pair["key"]]: pair["value"],
+            [pair["key"]]: smithy_client_1.expectString(pair["value"]),
         };
     }, {});
 };
@@ -11048,7 +11048,7 @@ const deserializeAws_queryTopicLimitExceededException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -11071,7 +11071,7 @@ const deserializeAws_queryUserErrorException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -11080,7 +11080,7 @@ const deserializeAws_queryValidationException = (output, context) => {
         Message: undefined,
     };
     if (output["Message"] !== undefined) {
-        contents.Message = output["Message"];
+        contents.Message = smithy_client_1.expectString(output["Message"]);
     }
     return contents;
 };
@@ -11090,10 +11090,10 @@ const deserializeAws_queryVerificationException = (output, context) => {
         Status: undefined,
     };
     if (output["Message"] !== undefined) {
-        contents.Message = output["Message"];
+        contents.Message = smithy_client_1.expectString(output["Message"]);
     }
     if (output["Status"] !== undefined) {
-        contents.Status = output["Status"];
+        contents.Status = smithy_client_1.expectString(output["Status"]);
     }
     return contents;
 };
@@ -12136,17 +12136,18 @@ exports.paginateListAccounts = paginateListAccounts;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.deserializeAws_restJson1LogoutCommand = exports.deserializeAws_restJson1ListAccountsCommand = exports.deserializeAws_restJson1ListAccountRolesCommand = exports.deserializeAws_restJson1GetRoleCredentialsCommand = exports.serializeAws_restJson1LogoutCommand = exports.serializeAws_restJson1ListAccountsCommand = exports.serializeAws_restJson1ListAccountRolesCommand = exports.serializeAws_restJson1GetRoleCredentialsCommand = void 0;
 const protocol_http_1 = __nccwpck_require__(7498);
+const smithy_client_1 = __nccwpck_require__(2223);
 const serializeAws_restJson1GetRoleCredentialsCommand = async (input, context) => {
+    const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {
         ...(isSerializableHeaderValue(input.accessToken) && { "x-amz-sso_bearer_token": input.accessToken }),
     };
-    let resolvedPath = "/federation/credentials";
+    let resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/federation/credentials";
     const query = {
         ...(input.roleName !== undefined && { role_name: input.roleName }),
         ...(input.accountId !== undefined && { account_id: input.accountId }),
     };
     let body;
-    const { hostname, protocol = "https", port } = await context.endpoint();
     return new protocol_http_1.HttpRequest({
         protocol,
         hostname,
@@ -12160,17 +12161,17 @@ const serializeAws_restJson1GetRoleCredentialsCommand = async (input, context) =
 };
 exports.serializeAws_restJson1GetRoleCredentialsCommand = serializeAws_restJson1GetRoleCredentialsCommand;
 const serializeAws_restJson1ListAccountRolesCommand = async (input, context) => {
+    const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {
         ...(isSerializableHeaderValue(input.accessToken) && { "x-amz-sso_bearer_token": input.accessToken }),
     };
-    let resolvedPath = "/assignment/roles";
+    let resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/assignment/roles";
     const query = {
         ...(input.nextToken !== undefined && { next_token: input.nextToken }),
         ...(input.maxResults !== undefined && { max_result: input.maxResults.toString() }),
         ...(input.accountId !== undefined && { account_id: input.accountId }),
     };
     let body;
-    const { hostname, protocol = "https", port } = await context.endpoint();
     return new protocol_http_1.HttpRequest({
         protocol,
         hostname,
@@ -12184,16 +12185,16 @@ const serializeAws_restJson1ListAccountRolesCommand = async (input, context) => 
 };
 exports.serializeAws_restJson1ListAccountRolesCommand = serializeAws_restJson1ListAccountRolesCommand;
 const serializeAws_restJson1ListAccountsCommand = async (input, context) => {
+    const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {
         ...(isSerializableHeaderValue(input.accessToken) && { "x-amz-sso_bearer_token": input.accessToken }),
     };
-    let resolvedPath = "/assignment/accounts";
+    let resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/assignment/accounts";
     const query = {
         ...(input.nextToken !== undefined && { next_token: input.nextToken }),
         ...(input.maxResults !== undefined && { max_result: input.maxResults.toString() }),
     };
     let body;
-    const { hostname, protocol = "https", port } = await context.endpoint();
     return new protocol_http_1.HttpRequest({
         protocol,
         hostname,
@@ -12207,12 +12208,12 @@ const serializeAws_restJson1ListAccountsCommand = async (input, context) => {
 };
 exports.serializeAws_restJson1ListAccountsCommand = serializeAws_restJson1ListAccountsCommand;
 const serializeAws_restJson1LogoutCommand = async (input, context) => {
+    const { hostname, protocol = "https", port, path: basePath } = await context.endpoint();
     const headers = {
         ...(isSerializableHeaderValue(input.accessToken) && { "x-amz-sso_bearer_token": input.accessToken }),
     };
-    let resolvedPath = "/logout";
+    let resolvedPath = `${(basePath === null || basePath === void 0 ? void 0 : basePath.endsWith("/")) ? basePath.slice(0, -1) : basePath || ""}` + "/logout";
     let body;
-    const { hostname, protocol = "https", port } = await context.endpoint();
     return new protocol_http_1.HttpRequest({
         protocol,
         hostname,
@@ -12307,7 +12308,7 @@ const deserializeAws_restJson1ListAccountRolesCommand = async (output, context) 
     };
     const data = await parseBody(output.body, context);
     if (data.nextToken !== undefined && data.nextToken !== null) {
-        contents.nextToken = data.nextToken;
+        contents.nextToken = smithy_client_1.expectString(data.nextToken);
     }
     if (data.roleList !== undefined && data.roleList !== null) {
         contents.roleList = deserializeAws_restJson1RoleListType(data.roleList, context);
@@ -12386,7 +12387,7 @@ const deserializeAws_restJson1ListAccountsCommand = async (output, context) => {
         contents.accountList = deserializeAws_restJson1AccountListType(data.accountList, context);
     }
     if (data.nextToken !== undefined && data.nextToken !== null) {
-        contents.nextToken = data.nextToken;
+        contents.nextToken = smithy_client_1.expectString(data.nextToken);
     }
     return Promise.resolve(contents);
 };
@@ -12517,7 +12518,7 @@ const deserializeAws_restJson1InvalidRequestExceptionResponse = async (parsedOut
     };
     const data = parsedOutput.body;
     if (data.message !== undefined && data.message !== null) {
-        contents.message = data.message;
+        contents.message = smithy_client_1.expectString(data.message);
     }
     return contents;
 };
@@ -12530,7 +12531,7 @@ const deserializeAws_restJson1ResourceNotFoundExceptionResponse = async (parsedO
     };
     const data = parsedOutput.body;
     if (data.message !== undefined && data.message !== null) {
-        contents.message = data.message;
+        contents.message = smithy_client_1.expectString(data.message);
     }
     return contents;
 };
@@ -12543,7 +12544,7 @@ const deserializeAws_restJson1TooManyRequestsExceptionResponse = async (parsedOu
     };
     const data = parsedOutput.body;
     if (data.message !== undefined && data.message !== null) {
-        contents.message = data.message;
+        contents.message = smithy_client_1.expectString(data.message);
     }
     return contents;
 };
@@ -12556,15 +12557,15 @@ const deserializeAws_restJson1UnauthorizedExceptionResponse = async (parsedOutpu
     };
     const data = parsedOutput.body;
     if (data.message !== undefined && data.message !== null) {
-        contents.message = data.message;
+        contents.message = smithy_client_1.expectString(data.message);
     }
     return contents;
 };
 const deserializeAws_restJson1AccountInfo = (output, context) => {
     return {
-        accountId: output.accountId !== undefined && output.accountId !== null ? output.accountId : undefined,
-        accountName: output.accountName !== undefined && output.accountName !== null ? output.accountName : undefined,
-        emailAddress: output.emailAddress !== undefined && output.emailAddress !== null ? output.emailAddress : undefined,
+        accountId: smithy_client_1.expectString(output.accountId),
+        accountName: smithy_client_1.expectString(output.accountName),
+        emailAddress: smithy_client_1.expectString(output.emailAddress),
     };
 };
 const deserializeAws_restJson1AccountListType = (output, context) => {
@@ -12579,16 +12580,16 @@ const deserializeAws_restJson1AccountListType = (output, context) => {
 };
 const deserializeAws_restJson1RoleCredentials = (output, context) => {
     return {
-        accessKeyId: output.accessKeyId !== undefined && output.accessKeyId !== null ? output.accessKeyId : undefined,
-        expiration: output.expiration !== undefined && output.expiration !== null ? output.expiration : undefined,
-        secretAccessKey: output.secretAccessKey !== undefined && output.secretAccessKey !== null ? output.secretAccessKey : undefined,
-        sessionToken: output.sessionToken !== undefined && output.sessionToken !== null ? output.sessionToken : undefined,
+        accessKeyId: smithy_client_1.expectString(output.accessKeyId),
+        expiration: smithy_client_1.expectNumber(output.expiration),
+        secretAccessKey: smithy_client_1.expectString(output.secretAccessKey),
+        sessionToken: smithy_client_1.expectString(output.sessionToken),
     };
 };
 const deserializeAws_restJson1RoleInfo = (output, context) => {
     return {
-        accountId: output.accountId !== undefined && output.accountId !== null ? output.accountId : undefined,
-        roleName: output.roleName !== undefined && output.roleName !== null ? output.roleName : undefined,
+        accountId: smithy_client_1.expectString(output.accountId),
+        roleName: smithy_client_1.expectString(output.roleName),
     };
 };
 const deserializeAws_restJson1RoleListType = (output, context) => {
@@ -12905,7 +12906,7 @@ class STSClient extends smithy_client_1.Client {
         let _config_2 = config_resolver_1.resolveEndpointsConfig(_config_1);
         let _config_3 = middleware_retry_1.resolveRetryConfig(_config_2);
         let _config_4 = middleware_host_header_1.resolveHostHeaderConfig(_config_3);
-        let _config_5 = middleware_sdk_sts_1.resolveStsAuthConfig(_config_4, STSClient);
+        let _config_5 = middleware_sdk_sts_1.resolveStsAuthConfig(_config_4, { stsClientCtor: STSClient });
         let _config_6 = middleware_user_agent_1.resolveUserAgentConfig(_config_5);
         super(_config_6);
         this.config = _config_6;
@@ -15755,10 +15756,10 @@ const deserializeAws_queryAssumedRoleUser = (output, context) => {
         Arn: undefined,
     };
     if (output["AssumedRoleId"] !== undefined) {
-        contents.AssumedRoleId = output["AssumedRoleId"];
+        contents.AssumedRoleId = smithy_client_1.expectString(output["AssumedRoleId"]);
     }
     if (output["Arn"] !== undefined) {
-        contents.Arn = output["Arn"];
+        contents.Arn = smithy_client_1.expectString(output["Arn"]);
     }
     return contents;
 };
@@ -15779,7 +15780,7 @@ const deserializeAws_queryAssumeRoleResponse = (output, context) => {
         contents.PackedPolicySize = parseInt(output["PackedPolicySize"]);
     }
     if (output["SourceIdentity"] !== undefined) {
-        contents.SourceIdentity = output["SourceIdentity"];
+        contents.SourceIdentity = smithy_client_1.expectString(output["SourceIdentity"]);
     }
     return contents;
 };
@@ -15805,22 +15806,22 @@ const deserializeAws_queryAssumeRoleWithSAMLResponse = (output, context) => {
         contents.PackedPolicySize = parseInt(output["PackedPolicySize"]);
     }
     if (output["Subject"] !== undefined) {
-        contents.Subject = output["Subject"];
+        contents.Subject = smithy_client_1.expectString(output["Subject"]);
     }
     if (output["SubjectType"] !== undefined) {
-        contents.SubjectType = output["SubjectType"];
+        contents.SubjectType = smithy_client_1.expectString(output["SubjectType"]);
     }
     if (output["Issuer"] !== undefined) {
-        contents.Issuer = output["Issuer"];
+        contents.Issuer = smithy_client_1.expectString(output["Issuer"]);
     }
     if (output["Audience"] !== undefined) {
-        contents.Audience = output["Audience"];
+        contents.Audience = smithy_client_1.expectString(output["Audience"]);
     }
     if (output["NameQualifier"] !== undefined) {
-        contents.NameQualifier = output["NameQualifier"];
+        contents.NameQualifier = smithy_client_1.expectString(output["NameQualifier"]);
     }
     if (output["SourceIdentity"] !== undefined) {
-        contents.SourceIdentity = output["SourceIdentity"];
+        contents.SourceIdentity = smithy_client_1.expectString(output["SourceIdentity"]);
     }
     return contents;
 };
@@ -15838,7 +15839,7 @@ const deserializeAws_queryAssumeRoleWithWebIdentityResponse = (output, context) 
         contents.Credentials = deserializeAws_queryCredentials(output["Credentials"], context);
     }
     if (output["SubjectFromWebIdentityToken"] !== undefined) {
-        contents.SubjectFromWebIdentityToken = output["SubjectFromWebIdentityToken"];
+        contents.SubjectFromWebIdentityToken = smithy_client_1.expectString(output["SubjectFromWebIdentityToken"]);
     }
     if (output["AssumedRoleUser"] !== undefined) {
         contents.AssumedRoleUser = deserializeAws_queryAssumedRoleUser(output["AssumedRoleUser"], context);
@@ -15847,13 +15848,13 @@ const deserializeAws_queryAssumeRoleWithWebIdentityResponse = (output, context) 
         contents.PackedPolicySize = parseInt(output["PackedPolicySize"]);
     }
     if (output["Provider"] !== undefined) {
-        contents.Provider = output["Provider"];
+        contents.Provider = smithy_client_1.expectString(output["Provider"]);
     }
     if (output["Audience"] !== undefined) {
-        contents.Audience = output["Audience"];
+        contents.Audience = smithy_client_1.expectString(output["Audience"]);
     }
     if (output["SourceIdentity"] !== undefined) {
-        contents.SourceIdentity = output["SourceIdentity"];
+        contents.SourceIdentity = smithy_client_1.expectString(output["SourceIdentity"]);
     }
     return contents;
 };
@@ -15865,13 +15866,13 @@ const deserializeAws_queryCredentials = (output, context) => {
         Expiration: undefined,
     };
     if (output["AccessKeyId"] !== undefined) {
-        contents.AccessKeyId = output["AccessKeyId"];
+        contents.AccessKeyId = smithy_client_1.expectString(output["AccessKeyId"]);
     }
     if (output["SecretAccessKey"] !== undefined) {
-        contents.SecretAccessKey = output["SecretAccessKey"];
+        contents.SecretAccessKey = smithy_client_1.expectString(output["SecretAccessKey"]);
     }
     if (output["SessionToken"] !== undefined) {
-        contents.SessionToken = output["SessionToken"];
+        contents.SessionToken = smithy_client_1.expectString(output["SessionToken"]);
     }
     if (output["Expiration"] !== undefined) {
         contents.Expiration = new Date(output["Expiration"]);
@@ -15883,7 +15884,7 @@ const deserializeAws_queryDecodeAuthorizationMessageResponse = (output, context)
         DecodedMessage: undefined,
     };
     if (output["DecodedMessage"] !== undefined) {
-        contents.DecodedMessage = output["DecodedMessage"];
+        contents.DecodedMessage = smithy_client_1.expectString(output["DecodedMessage"]);
     }
     return contents;
 };
@@ -15892,7 +15893,7 @@ const deserializeAws_queryExpiredTokenException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -15902,10 +15903,10 @@ const deserializeAws_queryFederatedUser = (output, context) => {
         Arn: undefined,
     };
     if (output["FederatedUserId"] !== undefined) {
-        contents.FederatedUserId = output["FederatedUserId"];
+        contents.FederatedUserId = smithy_client_1.expectString(output["FederatedUserId"]);
     }
     if (output["Arn"] !== undefined) {
-        contents.Arn = output["Arn"];
+        contents.Arn = smithy_client_1.expectString(output["Arn"]);
     }
     return contents;
 };
@@ -15914,7 +15915,7 @@ const deserializeAws_queryGetAccessKeyInfoResponse = (output, context) => {
         Account: undefined,
     };
     if (output["Account"] !== undefined) {
-        contents.Account = output["Account"];
+        contents.Account = smithy_client_1.expectString(output["Account"]);
     }
     return contents;
 };
@@ -15925,13 +15926,13 @@ const deserializeAws_queryGetCallerIdentityResponse = (output, context) => {
         Arn: undefined,
     };
     if (output["UserId"] !== undefined) {
-        contents.UserId = output["UserId"];
+        contents.UserId = smithy_client_1.expectString(output["UserId"]);
     }
     if (output["Account"] !== undefined) {
-        contents.Account = output["Account"];
+        contents.Account = smithy_client_1.expectString(output["Account"]);
     }
     if (output["Arn"] !== undefined) {
-        contents.Arn = output["Arn"];
+        contents.Arn = smithy_client_1.expectString(output["Arn"]);
     }
     return contents;
 };
@@ -15966,7 +15967,7 @@ const deserializeAws_queryIDPCommunicationErrorException = (output, context) => 
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -15975,7 +15976,7 @@ const deserializeAws_queryIDPRejectedClaimException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -15984,7 +15985,7 @@ const deserializeAws_queryInvalidAuthorizationMessageException = (output, contex
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -15993,7 +15994,7 @@ const deserializeAws_queryInvalidIdentityTokenException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -16002,7 +16003,7 @@ const deserializeAws_queryMalformedPolicyDocumentException = (output, context) =
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -16011,7 +16012,7 @@ const deserializeAws_queryPackedPolicyTooLargeException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -16020,7 +16021,7 @@ const deserializeAws_queryRegionDisabledException = (output, context) => {
         message: undefined,
     };
     if (output["message"] !== undefined) {
-        contents.message = output["message"];
+        contents.message = smithy_client_1.expectString(output["message"]);
     }
     return contents;
 };
@@ -18568,14 +18569,12 @@ const middleware_signing_1 = __nccwpck_require__(2487);
  * for role assumers for STS client internally. See `clients/client-sts/defaultStsRoleAssumers.ts`
  * and `clients/client-sts/STSClient.ts`.
  */
-const resolveStsAuthConfig = (input, stsClientCtor) => {
-    return middleware_signing_1.resolveAwsAuthConfig({
-        ...input,
-        stsClientCtor,
-    });
-};
+const resolveStsAuthConfig = (input, { stsClientCtor }) => middleware_signing_1.resolveAwsAuthConfig({
+    ...input,
+    stsClientCtor,
+});
 exports.resolveStsAuthConfig = resolveStsAuthConfig;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsb0VBQThHO0FBb0I5Rzs7OztHQUlHO0FBQ0ksTUFBTSxvQkFBb0IsR0FBRyxDQUNsQyxLQUFrRCxFQUNsRCxhQUErRCxFQUNwQyxFQUFFO0lBQzdCLE9BQU8seUNBQW9CLENBQUM7UUFDMUIsR0FBRyxLQUFLO1FBQ1IsYUFBYTtLQUNkLENBQUMsQ0FBQztBQUNMLENBQUMsQ0FBQztBQVJXLFFBQUEsb0JBQW9CLHdCQVEvQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEF3c0F1dGhJbnB1dENvbmZpZywgQXdzQXV0aFJlc29sdmVkQ29uZmlnLCByZXNvbHZlQXdzQXV0aENvbmZpZyB9IGZyb20gXCJAYXdzLXNkay9taWRkbGV3YXJlLXNpZ25pbmdcIjtcbmltcG9ydCB7IENsaWVudCwgQ3JlZGVudGlhbHMsIEhhc2hDb25zdHJ1Y3RvciwgUGx1Z2dhYmxlLCBQcm92aWRlciwgUmVnaW9uSW5mb1Byb3ZpZGVyIH0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmV4cG9ydCBpbnRlcmZhY2UgU3RzQXV0aElucHV0Q29uZmlnIGV4dGVuZHMgQXdzQXV0aElucHV0Q29uZmlnIHt9XG5pbnRlcmZhY2UgUHJldmlvdXNseVJlc29sdmVkIHtcbiAgY3JlZGVudGlhbERlZmF1bHRQcm92aWRlcjogKGlucHV0OiBhbnkpID0+IFByb3ZpZGVyPENyZWRlbnRpYWxzPjtcbiAgcmVnaW9uOiBzdHJpbmcgfCBQcm92aWRlcjxzdHJpbmc+O1xuICByZWdpb25JbmZvUHJvdmlkZXI6IFJlZ2lvbkluZm9Qcm92aWRlcjtcbiAgc2lnbmluZ05hbWU/OiBzdHJpbmc7XG4gIHNlcnZpY2VJZDogc3RyaW5nO1xuICBzaGEyNTY6IEhhc2hDb25zdHJ1Y3Rvcjtcbn1cbmV4cG9ydCBpbnRlcmZhY2UgU3RzQXV0aFJlc29sdmVkQ29uZmlnIGV4dGVuZHMgQXdzQXV0aFJlc29sdmVkQ29uZmlnIHtcbiAgLyoqXG4gICAqIFJlZmVyZW5jZSB0byBTVFNDbGllbnQgY2xhc3MgY29uc3RydWN0b3IuXG4gICAqIEBpbnRlcm5hbFxuICAgKi9cbiAgc3RzQ2xpZW50Q3RvcjogbmV3IChjbGllbnRDb25maWc6IGFueSkgPT4gQ2xpZW50PGFueSwgYW55LCBhbnk+O1xufVxuXG4vKipcbiAqIFNldCBTVFMgY2xpZW50IGNvbnN0cnVjdG9yIHRvIGBzdHNDbGllbnRDdG9yYCBjb25maWcgcGFyYW1ldGVyLiBJdCBpcyB1c2VkXG4gKiBmb3Igcm9sZSBhc3N1bWVycyBmb3IgU1RTIGNsaWVudCBpbnRlcm5hbGx5LiBTZWUgYGNsaWVudHMvY2xpZW50LXN0cy9kZWZhdWx0U3RzUm9sZUFzc3VtZXJzLnRzYFxuICogYW5kIGBjbGllbnRzL2NsaWVudC1zdHMvU1RTQ2xpZW50LnRzYC5cbiAqL1xuZXhwb3J0IGNvbnN0IHJlc29sdmVTdHNBdXRoQ29uZmlnID0gPFQ+KFxuICBpbnB1dDogVCAmIFByZXZpb3VzbHlSZXNvbHZlZCAmIFN0c0F1dGhJbnB1dENvbmZpZyxcbiAgc3RzQ2xpZW50Q3RvcjogbmV3IChjbGllbnRDb25maWc6IGFueSkgPT4gQ2xpZW50PGFueSwgYW55LCBhbnk+XG4pOiBUICYgU3RzQXV0aFJlc29sdmVkQ29uZmlnID0+IHtcbiAgcmV0dXJuIHJlc29sdmVBd3NBdXRoQ29uZmlnKHtcbiAgICAuLi5pbnB1dCxcbiAgICBzdHNDbGllbnRDdG9yLFxuICB9KTtcbn07XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsb0VBQThHO0FBMkI5Rzs7OztHQUlHO0FBQ0ksTUFBTSxvQkFBb0IsR0FBRyxDQUNsQyxLQUFrRCxFQUNsRCxFQUFFLGFBQWEsRUFBd0IsRUFDWixFQUFFLENBQzdCLHlDQUFvQixDQUFDO0lBQ25CLEdBQUcsS0FBSztJQUNSLGFBQWE7Q0FDZCxDQUFDLENBQUM7QUFQUSxRQUFBLG9CQUFvQix3QkFPNUIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBBd3NBdXRoSW5wdXRDb25maWcsIEF3c0F1dGhSZXNvbHZlZENvbmZpZywgcmVzb2x2ZUF3c0F1dGhDb25maWcgfSBmcm9tIFwiQGF3cy1zZGsvbWlkZGxld2FyZS1zaWduaW5nXCI7XG5pbXBvcnQgeyBDbGllbnQsIENyZWRlbnRpYWxzLCBIYXNoQ29uc3RydWN0b3IsIFBsdWdnYWJsZSwgUHJvdmlkZXIsIFJlZ2lvbkluZm9Qcm92aWRlciB9IGZyb20gXCJAYXdzLXNkay90eXBlc1wiO1xuXG5leHBvcnQgaW50ZXJmYWNlIFN0c0F1dGhJbnB1dENvbmZpZyBleHRlbmRzIEF3c0F1dGhJbnB1dENvbmZpZyB7fVxuaW50ZXJmYWNlIFByZXZpb3VzbHlSZXNvbHZlZCB7XG4gIGNyZWRlbnRpYWxEZWZhdWx0UHJvdmlkZXI6IChpbnB1dDogYW55KSA9PiBQcm92aWRlcjxDcmVkZW50aWFscz47XG4gIHJlZ2lvbjogc3RyaW5nIHwgUHJvdmlkZXI8c3RyaW5nPjtcbiAgcmVnaW9uSW5mb1Byb3ZpZGVyOiBSZWdpb25JbmZvUHJvdmlkZXI7XG4gIHNpZ25pbmdOYW1lPzogc3RyaW5nO1xuICBzZXJ2aWNlSWQ6IHN0cmluZztcbiAgc2hhMjU2OiBIYXNoQ29uc3RydWN0b3I7XG59XG5leHBvcnQgaW50ZXJmYWNlIFN0c0F1dGhSZXNvbHZlZENvbmZpZyBleHRlbmRzIEF3c0F1dGhSZXNvbHZlZENvbmZpZyB7XG4gIC8qKlxuICAgKiBSZWZlcmVuY2UgdG8gU1RTQ2xpZW50IGNsYXNzIGNvbnN0cnVjdG9yLlxuICAgKiBAaW50ZXJuYWxcbiAgICovXG4gIHN0c0NsaWVudEN0b3I6IG5ldyAoY2xpZW50Q29uZmlnOiBhbnkpID0+IENsaWVudDxhbnksIGFueSwgYW55Pjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBTdHNBdXRoQ29uZmlnT3B0aW9ucyB7XG4gIC8qKlxuICAgKiBSZWZlcmVuY2UgdG8gU1RTQ2xpZW50IGNsYXNzIGNvbnN0cnVjdG9yLlxuICAgKi9cbiAgc3RzQ2xpZW50Q3RvcjogbmV3IChjbGllbnRDb25maWc6IGFueSkgPT4gQ2xpZW50PGFueSwgYW55LCBhbnk+O1xufVxuXG4vKipcbiAqIFNldCBTVFMgY2xpZW50IGNvbnN0cnVjdG9yIHRvIGBzdHNDbGllbnRDdG9yYCBjb25maWcgcGFyYW1ldGVyLiBJdCBpcyB1c2VkXG4gKiBmb3Igcm9sZSBhc3N1bWVycyBmb3IgU1RTIGNsaWVudCBpbnRlcm5hbGx5LiBTZWUgYGNsaWVudHMvY2xpZW50LXN0cy9kZWZhdWx0U3RzUm9sZUFzc3VtZXJzLnRzYFxuICogYW5kIGBjbGllbnRzL2NsaWVudC1zdHMvU1RTQ2xpZW50LnRzYC5cbiAqL1xuZXhwb3J0IGNvbnN0IHJlc29sdmVTdHNBdXRoQ29uZmlnID0gPFQ+KFxuICBpbnB1dDogVCAmIFByZXZpb3VzbHlSZXNvbHZlZCAmIFN0c0F1dGhJbnB1dENvbmZpZyxcbiAgeyBzdHNDbGllbnRDdG9yIH06IFN0c0F1dGhDb25maWdPcHRpb25zXG4pOiBUICYgU3RzQXV0aFJlc29sdmVkQ29uZmlnID0+XG4gIHJlc29sdmVBd3NBdXRoQ29uZmlnKHtcbiAgICAuLi5pbnB1dCxcbiAgICBzdHNDbGllbnRDdG9yLFxuICB9KTtcbiJdfQ==
 
 /***/ }),
 
@@ -20882,7 +20881,7 @@ class Client {
     }
 }
 exports.Client = Client;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xpZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NsaWVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSxnRUFBMkQ7QUFlM0QsTUFBYSxNQUFNO0lBU2pCLFlBQVksTUFBbUM7UUFGeEMsb0JBQWUsR0FBRyxpQ0FBYyxFQUE2QixDQUFDO1FBR25FLElBQUksQ0FBQyxNQUFNLEdBQUcsTUFBTSxDQUFDO0lBQ3ZCLENBQUM7SUFjRCxJQUFJLENBQ0YsT0FBK0csRUFDL0csV0FBc0UsRUFDdEUsRUFBMEM7UUFFMUMsTUFBTSxPQUFPLEdBQUcsT0FBTyxXQUFXLEtBQUssVUFBVSxDQUFDLENBQUMsQ0FBQyxXQUFXLENBQUMsQ0FBQyxDQUFDLFNBQVMsQ0FBQztRQUM1RSxNQUFNLFFBQVEsR0FBRyxPQUFPLFdBQVcsS0FBSyxVQUFVLENBQUMsQ0FBQyxDQUFFLFdBQXFELENBQUMsQ0FBQyxDQUFDLEVBQUUsQ0FBQztRQUNqSCxNQUFNLE9BQU8sR0FBRyxPQUFPLENBQUMsaUJBQWlCLENBQUMsSUFBSSxDQUFDLGVBQXNCLEVBQUUsSUFBSSxDQUFDLE1BQU0sRUFBRSxPQUFPLENBQUMsQ0FBQztRQUM3RixJQUFJLFFBQVEsRUFBRTtZQUNaLE9BQU8sQ0FBQyxPQUFPLENBQUM7aUJBQ2IsSUFBSSxDQUNILENBQUMsTUFBTSxFQUFFLEVBQUUsQ0FBQyxRQUFRLENBQUMsSUFBSSxFQUFFLE1BQU0sQ0FBQyxNQUFNLENBQUMsRUFDekMsQ0FBQyxHQUFRLEVBQUUsRUFBRSxDQUFDLFFBQVEsQ0FBQyxHQUFHLENBQUMsQ0FDNUI7aUJBQ0EsS0FBSztZQUNKLCtEQUErRDtZQUMvRCw4QkFBOEI7WUFDOUIsR0FBRyxFQUFFLEdBQUUsQ0FBQyxDQUNULENBQUM7U0FDTDthQUFNO1lBQ0wsT0FBTyxPQUFPLENBQUMsT0FBTyxDQUFDLENBQUMsSUFBSSxDQUFDLENBQUMsTUFBTSxFQUFFLEVBQUUsQ0FBQyxNQUFNLENBQUMsTUFBTSxDQUFDLENBQUM7U0FDekQ7SUFDSCxDQUFDO0lBRUQsT0FBTztRQUNMLElBQUksSUFBSSxDQUFDLE1BQU0sQ0FBQyxjQUFjLENBQUMsT0FBTztZQUFFLElBQUksQ0FBQyxNQUFNLENBQUMsY0FBYyxDQUFDLE9BQU8sRUFBRSxDQUFDO0lBQy9FLENBQUM7Q0FDRjtBQXBERCx3QkFvREMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBjb25zdHJ1Y3RTdGFjayB9IGZyb20gXCJAYXdzLXNkay9taWRkbGV3YXJlLXN0YWNrXCI7XG5pbXBvcnQgeyBDbGllbnQgYXMgSUNsaWVudCwgQ29tbWFuZCwgTWV0YWRhdGFCZWFyZXIsIFJlcXVlc3RIYW5kbGVyIH0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmV4cG9ydCBpbnRlcmZhY2UgU21pdGh5Q29uZmlndXJhdGlvbjxIYW5kbGVyT3B0aW9ucz4ge1xuICByZXF1ZXN0SGFuZGxlcjogUmVxdWVzdEhhbmRsZXI8YW55LCBhbnksIEhhbmRsZXJPcHRpb25zPjtcbiAgLyoqXG4gICAqIFRoZSBBUEkgdmVyc2lvbiBzZXQgaW50ZXJuYWxseSBieSB0aGUgU0RLLCBhbmQgaXNcbiAgICogbm90IHBsYW5uZWQgdG8gYmUgdXNlZCBieSBjdXN0b21lciBjb2RlLlxuICAgKiBAaW50ZXJuYWxcbiAgICovXG4gIHJlYWRvbmx5IGFwaVZlcnNpb246IHN0cmluZztcbn1cblxuZXhwb3J0IHR5cGUgU21pdGh5UmVzb2x2ZWRDb25maWd1cmF0aW9uPEhhbmRsZXJPcHRpb25zPiA9IFNtaXRoeUNvbmZpZ3VyYXRpb248SGFuZGxlck9wdGlvbnM+O1xuXG5leHBvcnQgY2xhc3MgQ2xpZW50PFxuICBIYW5kbGVyT3B0aW9ucyxcbiAgQ2xpZW50SW5wdXQgZXh0ZW5kcyBvYmplY3QsXG4gIENsaWVudE91dHB1dCBleHRlbmRzIE1ldGFkYXRhQmVhcmVyLFxuICBSZXNvbHZlZENsaWVudENvbmZpZ3VyYXRpb24gZXh0ZW5kcyBTbWl0aHlSZXNvbHZlZENvbmZpZ3VyYXRpb248SGFuZGxlck9wdGlvbnM+XG4+IGltcGxlbWVudHMgSUNsaWVudDxDbGllbnRJbnB1dCwgQ2xpZW50T3V0cHV0LCBSZXNvbHZlZENsaWVudENvbmZpZ3VyYXRpb24+XG57XG4gIHB1YmxpYyBtaWRkbGV3YXJlU3RhY2sgPSBjb25zdHJ1Y3RTdGFjazxDbGllbnRJbnB1dCwgQ2xpZW50T3V0cHV0PigpO1xuICByZWFkb25seSBjb25maWc6IFJlc29sdmVkQ2xpZW50Q29uZmlndXJhdGlvbjtcbiAgY29uc3RydWN0b3IoY29uZmlnOiBSZXNvbHZlZENsaWVudENvbmZpZ3VyYXRpb24pIHtcbiAgICB0aGlzLmNvbmZpZyA9IGNvbmZpZztcbiAgfVxuICBzZW5kPElucHV0VHlwZSBleHRlbmRzIENsaWVudElucHV0LCBPdXRwdXRUeXBlIGV4dGVuZHMgQ2xpZW50T3V0cHV0PihcbiAgICBjb21tYW5kOiBDb21tYW5kPENsaWVudElucHV0LCBJbnB1dFR5cGUsIENsaWVudE91dHB1dCwgT3V0cHV0VHlwZSwgU21pdGh5UmVzb2x2ZWRDb25maWd1cmF0aW9uPEhhbmRsZXJPcHRpb25zPj4sXG4gICAgb3B0aW9ucz86IEhhbmRsZXJPcHRpb25zXG4gICk6IFByb21pc2U8T3V0cHV0VHlwZT47XG4gIHNlbmQ8SW5wdXRUeXBlIGV4dGVuZHMgQ2xpZW50SW5wdXQsIE91dHB1dFR5cGUgZXh0ZW5kcyBDbGllbnRPdXRwdXQ+KFxuICAgIGNvbW1hbmQ6IENvbW1hbmQ8Q2xpZW50SW5wdXQsIElucHV0VHlwZSwgQ2xpZW50T3V0cHV0LCBPdXRwdXRUeXBlLCBTbWl0aHlSZXNvbHZlZENvbmZpZ3VyYXRpb248SGFuZGxlck9wdGlvbnM+PixcbiAgICBjYjogKGVycjogYW55LCBkYXRhPzogT3V0cHV0VHlwZSkgPT4gdm9pZFxuICApOiB2b2lkO1xuICBzZW5kPElucHV0VHlwZSBleHRlbmRzIENsaWVudElucHV0LCBPdXRwdXRUeXBlIGV4dGVuZHMgQ2xpZW50T3V0cHV0PihcbiAgICBjb21tYW5kOiBDb21tYW5kPENsaWVudElucHV0LCBJbnB1dFR5cGUsIENsaWVudE91dHB1dCwgT3V0cHV0VHlwZSwgU21pdGh5UmVzb2x2ZWRDb25maWd1cmF0aW9uPEhhbmRsZXJPcHRpb25zPj4sXG4gICAgb3B0aW9uczogSGFuZGxlck9wdGlvbnMsXG4gICAgY2I6IChlcnI6IGFueSwgZGF0YT86IE91dHB1dFR5cGUpID0+IHZvaWRcbiAgKTogdm9pZDtcbiAgc2VuZDxJbnB1dFR5cGUgZXh0ZW5kcyBDbGllbnRJbnB1dCwgT3V0cHV0VHlwZSBleHRlbmRzIENsaWVudE91dHB1dD4oXG4gICAgY29tbWFuZDogQ29tbWFuZDxDbGllbnRJbnB1dCwgSW5wdXRUeXBlLCBDbGllbnRPdXRwdXQsIE91dHB1dFR5cGUsIFNtaXRoeVJlc29sdmVkQ29uZmlndXJhdGlvbjxIYW5kbGVyT3B0aW9ucz4+LFxuICAgIG9wdGlvbnNPckNiPzogSGFuZGxlck9wdGlvbnMgfCAoKGVycjogYW55LCBkYXRhPzogT3V0cHV0VHlwZSkgPT4gdm9pZCksXG4gICAgY2I/OiAoZXJyOiBhbnksIGRhdGE/OiBPdXRwdXRUeXBlKSA9PiB2b2lkXG4gICk6IFByb21pc2U8T3V0cHV0VHlwZT4gfCB2b2lkIHtcbiAgICBjb25zdCBvcHRpb25zID0gdHlwZW9mIG9wdGlvbnNPckNiICE9PSBcImZ1bmN0aW9uXCIgPyBvcHRpb25zT3JDYiA6IHVuZGVmaW5lZDtcbiAgICBjb25zdCBjYWxsYmFjayA9IHR5cGVvZiBvcHRpb25zT3JDYiA9PT0gXCJmdW5jdGlvblwiID8gKG9wdGlvbnNPckNiIGFzIChlcnI6IGFueSwgZGF0YT86IE91dHB1dFR5cGUpID0+IHZvaWQpIDogY2I7XG4gICAgY29uc3QgaGFuZGxlciA9IGNvbW1hbmQucmVzb2x2ZU1pZGRsZXdhcmUodGhpcy5taWRkbGV3YXJlU3RhY2sgYXMgYW55LCB0aGlzLmNvbmZpZywgb3B0aW9ucyk7XG4gICAgaWYgKGNhbGxiYWNrKSB7XG4gICAgICBoYW5kbGVyKGNvbW1hbmQpXG4gICAgICAgIC50aGVuKFxuICAgICAgICAgIChyZXN1bHQpID0+IGNhbGxiYWNrKG51bGwsIHJlc3VsdC5vdXRwdXQpLFxuICAgICAgICAgIChlcnI6IGFueSkgPT4gY2FsbGJhY2soZXJyKVxuICAgICAgICApXG4gICAgICAgIC5jYXRjaChcbiAgICAgICAgICAvLyBwcmV2ZW50IGFueSBlcnJvcnMgdGhyb3duIGluIHRoZSBjYWxsYmFjayBmcm9tIHRyaWdnZXJpbmcgYW5cbiAgICAgICAgICAvLyB1bmhhbmRsZWQgcHJvbWlzZSByZWplY3Rpb25cbiAgICAgICAgICAoKSA9PiB7fVxuICAgICAgICApO1xuICAgIH0gZWxzZSB7XG4gICAgICByZXR1cm4gaGFuZGxlcihjb21tYW5kKS50aGVuKChyZXN1bHQpID0+IHJlc3VsdC5vdXRwdXQpO1xuICAgIH1cbiAgfVxuXG4gIGRlc3Ryb3koKSB7XG4gICAgaWYgKHRoaXMuY29uZmlnLnJlcXVlc3RIYW5kbGVyLmRlc3Ryb3kpIHRoaXMuY29uZmlnLnJlcXVlc3RIYW5kbGVyLmRlc3Ryb3koKTtcbiAgfVxufVxuIl19
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xpZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NsaWVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSxnRUFBMkQ7QUFlM0QsTUFBYSxNQUFNO0lBU2pCLFlBQVksTUFBbUM7UUFGeEMsb0JBQWUsR0FBK0MsaUNBQWMsRUFBNkIsQ0FBQztRQUcvRyxJQUFJLENBQUMsTUFBTSxHQUFHLE1BQU0sQ0FBQztJQUN2QixDQUFDO0lBY0QsSUFBSSxDQUNGLE9BQStHLEVBQy9HLFdBQXNFLEVBQ3RFLEVBQTBDO1FBRTFDLE1BQU0sT0FBTyxHQUFHLE9BQU8sV0FBVyxLQUFLLFVBQVUsQ0FBQyxDQUFDLENBQUMsV0FBVyxDQUFDLENBQUMsQ0FBQyxTQUFTLENBQUM7UUFDNUUsTUFBTSxRQUFRLEdBQUcsT0FBTyxXQUFXLEtBQUssVUFBVSxDQUFDLENBQUMsQ0FBRSxXQUFxRCxDQUFDLENBQUMsQ0FBQyxFQUFFLENBQUM7UUFDakgsTUFBTSxPQUFPLEdBQUcsT0FBTyxDQUFDLGlCQUFpQixDQUFDLElBQUksQ0FBQyxlQUFzQixFQUFFLElBQUksQ0FBQyxNQUFNLEVBQUUsT0FBTyxDQUFDLENBQUM7UUFDN0YsSUFBSSxRQUFRLEVBQUU7WUFDWixPQUFPLENBQUMsT0FBTyxDQUFDO2lCQUNiLElBQUksQ0FDSCxDQUFDLE1BQU0sRUFBRSxFQUFFLENBQUMsUUFBUSxDQUFDLElBQUksRUFBRSxNQUFNLENBQUMsTUFBTSxDQUFDLEVBQ3pDLENBQUMsR0FBUSxFQUFFLEVBQUUsQ0FBQyxRQUFRLENBQUMsR0FBRyxDQUFDLENBQzVCO2lCQUNBLEtBQUs7WUFDSiwrREFBK0Q7WUFDL0QsOEJBQThCO1lBQzlCLEdBQUcsRUFBRSxHQUFFLENBQUMsQ0FDVCxDQUFDO1NBQ0w7YUFBTTtZQUNMLE9BQU8sT0FBTyxDQUFDLE9BQU8sQ0FBQyxDQUFDLElBQUksQ0FBQyxDQUFDLE1BQU0sRUFBRSxFQUFFLENBQUMsTUFBTSxDQUFDLE1BQU0sQ0FBQyxDQUFDO1NBQ3pEO0lBQ0gsQ0FBQztJQUVELE9BQU87UUFDTCxJQUFJLElBQUksQ0FBQyxNQUFNLENBQUMsY0FBYyxDQUFDLE9BQU87WUFBRSxJQUFJLENBQUMsTUFBTSxDQUFDLGNBQWMsQ0FBQyxPQUFPLEVBQUUsQ0FBQztJQUMvRSxDQUFDO0NBQ0Y7QUFwREQsd0JBb0RDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY29uc3RydWN0U3RhY2sgfSBmcm9tIFwiQGF3cy1zZGsvbWlkZGxld2FyZS1zdGFja1wiO1xuaW1wb3J0IHsgQ2xpZW50IGFzIElDbGllbnQsIENvbW1hbmQsIE1ldGFkYXRhQmVhcmVyLCBNaWRkbGV3YXJlU3RhY2ssIFJlcXVlc3RIYW5kbGVyIH0gZnJvbSBcIkBhd3Mtc2RrL3R5cGVzXCI7XG5cbmV4cG9ydCBpbnRlcmZhY2UgU21pdGh5Q29uZmlndXJhdGlvbjxIYW5kbGVyT3B0aW9ucz4ge1xuICByZXF1ZXN0SGFuZGxlcjogUmVxdWVzdEhhbmRsZXI8YW55LCBhbnksIEhhbmRsZXJPcHRpb25zPjtcbiAgLyoqXG4gICAqIFRoZSBBUEkgdmVyc2lvbiBzZXQgaW50ZXJuYWxseSBieSB0aGUgU0RLLCBhbmQgaXNcbiAgICogbm90IHBsYW5uZWQgdG8gYmUgdXNlZCBieSBjdXN0b21lciBjb2RlLlxuICAgKiBAaW50ZXJuYWxcbiAgICovXG4gIHJlYWRvbmx5IGFwaVZlcnNpb246IHN0cmluZztcbn1cblxuZXhwb3J0IHR5cGUgU21pdGh5UmVzb2x2ZWRDb25maWd1cmF0aW9uPEhhbmRsZXJPcHRpb25zPiA9IFNtaXRoeUNvbmZpZ3VyYXRpb248SGFuZGxlck9wdGlvbnM+O1xuXG5leHBvcnQgY2xhc3MgQ2xpZW50PFxuICBIYW5kbGVyT3B0aW9ucyxcbiAgQ2xpZW50SW5wdXQgZXh0ZW5kcyBvYmplY3QsXG4gIENsaWVudE91dHB1dCBleHRlbmRzIE1ldGFkYXRhQmVhcmVyLFxuICBSZXNvbHZlZENsaWVudENvbmZpZ3VyYXRpb24gZXh0ZW5kcyBTbWl0aHlSZXNvbHZlZENvbmZpZ3VyYXRpb248SGFuZGxlck9wdGlvbnM+XG4+IGltcGxlbWVudHMgSUNsaWVudDxDbGllbnRJbnB1dCwgQ2xpZW50T3V0cHV0LCBSZXNvbHZlZENsaWVudENvbmZpZ3VyYXRpb24+XG57XG4gIHB1YmxpYyBtaWRkbGV3YXJlU3RhY2s6IE1pZGRsZXdhcmVTdGFjazxDbGllbnRJbnB1dCwgQ2xpZW50T3V0cHV0PiA9IGNvbnN0cnVjdFN0YWNrPENsaWVudElucHV0LCBDbGllbnRPdXRwdXQ+KCk7XG4gIHJlYWRvbmx5IGNvbmZpZzogUmVzb2x2ZWRDbGllbnRDb25maWd1cmF0aW9uO1xuICBjb25zdHJ1Y3Rvcihjb25maWc6IFJlc29sdmVkQ2xpZW50Q29uZmlndXJhdGlvbikge1xuICAgIHRoaXMuY29uZmlnID0gY29uZmlnO1xuICB9XG4gIHNlbmQ8SW5wdXRUeXBlIGV4dGVuZHMgQ2xpZW50SW5wdXQsIE91dHB1dFR5cGUgZXh0ZW5kcyBDbGllbnRPdXRwdXQ+KFxuICAgIGNvbW1hbmQ6IENvbW1hbmQ8Q2xpZW50SW5wdXQsIElucHV0VHlwZSwgQ2xpZW50T3V0cHV0LCBPdXRwdXRUeXBlLCBTbWl0aHlSZXNvbHZlZENvbmZpZ3VyYXRpb248SGFuZGxlck9wdGlvbnM+PixcbiAgICBvcHRpb25zPzogSGFuZGxlck9wdGlvbnNcbiAgKTogUHJvbWlzZTxPdXRwdXRUeXBlPjtcbiAgc2VuZDxJbnB1dFR5cGUgZXh0ZW5kcyBDbGllbnRJbnB1dCwgT3V0cHV0VHlwZSBleHRlbmRzIENsaWVudE91dHB1dD4oXG4gICAgY29tbWFuZDogQ29tbWFuZDxDbGllbnRJbnB1dCwgSW5wdXRUeXBlLCBDbGllbnRPdXRwdXQsIE91dHB1dFR5cGUsIFNtaXRoeVJlc29sdmVkQ29uZmlndXJhdGlvbjxIYW5kbGVyT3B0aW9ucz4+LFxuICAgIGNiOiAoZXJyOiBhbnksIGRhdGE/OiBPdXRwdXRUeXBlKSA9PiB2b2lkXG4gICk6IHZvaWQ7XG4gIHNlbmQ8SW5wdXRUeXBlIGV4dGVuZHMgQ2xpZW50SW5wdXQsIE91dHB1dFR5cGUgZXh0ZW5kcyBDbGllbnRPdXRwdXQ+KFxuICAgIGNvbW1hbmQ6IENvbW1hbmQ8Q2xpZW50SW5wdXQsIElucHV0VHlwZSwgQ2xpZW50T3V0cHV0LCBPdXRwdXRUeXBlLCBTbWl0aHlSZXNvbHZlZENvbmZpZ3VyYXRpb248SGFuZGxlck9wdGlvbnM+PixcbiAgICBvcHRpb25zOiBIYW5kbGVyT3B0aW9ucyxcbiAgICBjYjogKGVycjogYW55LCBkYXRhPzogT3V0cHV0VHlwZSkgPT4gdm9pZFxuICApOiB2b2lkO1xuICBzZW5kPElucHV0VHlwZSBleHRlbmRzIENsaWVudElucHV0LCBPdXRwdXRUeXBlIGV4dGVuZHMgQ2xpZW50T3V0cHV0PihcbiAgICBjb21tYW5kOiBDb21tYW5kPENsaWVudElucHV0LCBJbnB1dFR5cGUsIENsaWVudE91dHB1dCwgT3V0cHV0VHlwZSwgU21pdGh5UmVzb2x2ZWRDb25maWd1cmF0aW9uPEhhbmRsZXJPcHRpb25zPj4sXG4gICAgb3B0aW9uc09yQ2I/OiBIYW5kbGVyT3B0aW9ucyB8ICgoZXJyOiBhbnksIGRhdGE/OiBPdXRwdXRUeXBlKSA9PiB2b2lkKSxcbiAgICBjYj86IChlcnI6IGFueSwgZGF0YT86IE91dHB1dFR5cGUpID0+IHZvaWRcbiAgKTogUHJvbWlzZTxPdXRwdXRUeXBlPiB8IHZvaWQge1xuICAgIGNvbnN0IG9wdGlvbnMgPSB0eXBlb2Ygb3B0aW9uc09yQ2IgIT09IFwiZnVuY3Rpb25cIiA/IG9wdGlvbnNPckNiIDogdW5kZWZpbmVkO1xuICAgIGNvbnN0IGNhbGxiYWNrID0gdHlwZW9mIG9wdGlvbnNPckNiID09PSBcImZ1bmN0aW9uXCIgPyAob3B0aW9uc09yQ2IgYXMgKGVycjogYW55LCBkYXRhPzogT3V0cHV0VHlwZSkgPT4gdm9pZCkgOiBjYjtcbiAgICBjb25zdCBoYW5kbGVyID0gY29tbWFuZC5yZXNvbHZlTWlkZGxld2FyZSh0aGlzLm1pZGRsZXdhcmVTdGFjayBhcyBhbnksIHRoaXMuY29uZmlnLCBvcHRpb25zKTtcbiAgICBpZiAoY2FsbGJhY2spIHtcbiAgICAgIGhhbmRsZXIoY29tbWFuZClcbiAgICAgICAgLnRoZW4oXG4gICAgICAgICAgKHJlc3VsdCkgPT4gY2FsbGJhY2sobnVsbCwgcmVzdWx0Lm91dHB1dCksXG4gICAgICAgICAgKGVycjogYW55KSA9PiBjYWxsYmFjayhlcnIpXG4gICAgICAgIClcbiAgICAgICAgLmNhdGNoKFxuICAgICAgICAgIC8vIHByZXZlbnQgYW55IGVycm9ycyB0aHJvd24gaW4gdGhlIGNhbGxiYWNrIGZyb20gdHJpZ2dlcmluZyBhblxuICAgICAgICAgIC8vIHVuaGFuZGxlZCBwcm9taXNlIHJlamVjdGlvblxuICAgICAgICAgICgpID0+IHt9XG4gICAgICAgICk7XG4gICAgfSBlbHNlIHtcbiAgICAgIHJldHVybiBoYW5kbGVyKGNvbW1hbmQpLnRoZW4oKHJlc3VsdCkgPT4gcmVzdWx0Lm91dHB1dCk7XG4gICAgfVxuICB9XG5cbiAgZGVzdHJveSgpIHtcbiAgICBpZiAodGhpcy5jb25maWcucmVxdWVzdEhhbmRsZXIuZGVzdHJveSkgdGhpcy5jb25maWcucmVxdWVzdEhhbmRsZXIuZGVzdHJveSgpO1xuICB9XG59XG4iXX0=
 
 /***/ }),
 
@@ -21060,12 +21059,14 @@ tslib_1.__exportStar(__nccwpck_require__(7121), exports);
 tslib_1.__exportStar(__nccwpck_require__(4650), exports);
 tslib_1.__exportStar(__nccwpck_require__(6526), exports);
 tslib_1.__exportStar(__nccwpck_require__(1207), exports);
+tslib_1.__exportStar(__nccwpck_require__(3186), exports);
+tslib_1.__exportStar(__nccwpck_require__(422), exports);
 tslib_1.__exportStar(__nccwpck_require__(1370), exports);
 tslib_1.__exportStar(__nccwpck_require__(6399), exports);
 tslib_1.__exportStar(__nccwpck_require__(6171), exports);
 tslib_1.__exportStar(__nccwpck_require__(2908), exports);
 tslib_1.__exportStar(__nccwpck_require__(1200), exports);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsbURBQXlCO0FBQ3pCLG9EQUEwQjtBQUMxQiwwREFBZ0M7QUFDaEMsc0RBQTRCO0FBQzVCLDBFQUFnRDtBQUNoRCxxRUFBMkM7QUFDM0MscUVBQTJDO0FBQzNDLHNEQUE0QjtBQUM1Qix1REFBNkI7QUFDN0Isd0RBQThCO0FBQzlCLHNEQUE0QjtBQUM1Qiw0REFBa0M7QUFDbEMsc0RBQTRCIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0ICogZnJvbSBcIi4vY2xpZW50XCI7XG5leHBvcnQgKiBmcm9tIFwiLi9jb21tYW5kXCI7XG5leHBvcnQgKiBmcm9tIFwiLi9kb2N1bWVudC10eXBlXCI7XG5leHBvcnQgKiBmcm9tIFwiLi9leGNlcHRpb25cIjtcbmV4cG9ydCAqIGZyb20gXCIuL2V4dGVuZGVkLWVuY29kZS11cmktY29tcG9uZW50XCI7XG5leHBvcnQgKiBmcm9tIFwiLi9nZXQtYXJyYXktaWYtc2luZ2xlLWl0ZW1cIjtcbmV4cG9ydCAqIGZyb20gXCIuL2dldC12YWx1ZS1mcm9tLXRleHQtbm9kZVwiO1xuZXhwb3J0ICogZnJvbSBcIi4vbGF6eS1qc29uXCI7XG5leHBvcnQgKiBmcm9tIFwiLi9kYXRlLXV0aWxzXCI7XG5leHBvcnQgKiBmcm9tIFwiLi9zcGxpdC1ldmVyeVwiO1xuZXhwb3J0ICogZnJvbSBcIi4vY29uc3RhbnRzXCI7XG5leHBvcnQgKiBmcm9tIFwiLi9yZXRyeWFibGUtdHJhaXRcIjtcbmV4cG9ydCAqIGZyb20gXCIuL3Nkay1lcnJvclwiO1xuIl19
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsbURBQXlCO0FBQ3pCLG9EQUEwQjtBQUMxQiwwREFBZ0M7QUFDaEMsc0RBQTRCO0FBQzVCLDBFQUFnRDtBQUNoRCxxRUFBMkM7QUFDM0MscUVBQTJDO0FBQzNDLHNEQUE0QjtBQUM1Qix3REFBOEI7QUFDOUIsc0RBQTRCO0FBQzVCLHVEQUE2QjtBQUM3Qix3REFBOEI7QUFDOUIsc0RBQTRCO0FBQzVCLDREQUFrQztBQUNsQyxzREFBNEIiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tIFwiLi9jbGllbnRcIjtcbmV4cG9ydCAqIGZyb20gXCIuL2NvbW1hbmRcIjtcbmV4cG9ydCAqIGZyb20gXCIuL2RvY3VtZW50LXR5cGVcIjtcbmV4cG9ydCAqIGZyb20gXCIuL2V4Y2VwdGlvblwiO1xuZXhwb3J0ICogZnJvbSBcIi4vZXh0ZW5kZWQtZW5jb2RlLXVyaS1jb21wb25lbnRcIjtcbmV4cG9ydCAqIGZyb20gXCIuL2dldC1hcnJheS1pZi1zaW5nbGUtaXRlbVwiO1xuZXhwb3J0ICogZnJvbSBcIi4vZ2V0LXZhbHVlLWZyb20tdGV4dC1ub2RlXCI7XG5leHBvcnQgKiBmcm9tIFwiLi9sYXp5LWpzb25cIjtcbmV4cG9ydCAqIGZyb20gXCIuL3BhcnNlLXV0aWxzXCI7XG5leHBvcnQgKiBmcm9tIFwiLi9zZXItdXRpbHNcIjtcbmV4cG9ydCAqIGZyb20gXCIuL2RhdGUtdXRpbHNcIjtcbmV4cG9ydCAqIGZyb20gXCIuL3NwbGl0LWV2ZXJ5XCI7XG5leHBvcnQgKiBmcm9tIFwiLi9jb25zdGFudHNcIjtcbmV4cG9ydCAqIGZyb20gXCIuL3JldHJ5YWJsZS10cmFpdFwiO1xuZXhwb3J0ICogZnJvbSBcIi4vc2RrLWVycm9yXCI7XG4iXX0=
 
 /***/ }),
 
@@ -21127,6 +21128,109 @@ exports.LazyJsonString = LazyJsonString;
 
 /***/ }),
 
+/***/ 3186:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.handleFloat = exports.expectString = exports.expectNumber = exports.expectBoolean = exports.parseBoolean = void 0;
+/**
+ * Give an input string, strictly parses a boolean value.
+ *
+ * @param value The boolean string to parse.
+ * @returns true for "true", false for "false", otherwise an error is thrown.
+ */
+const parseBoolean = (value) => {
+    switch (value) {
+        case "true":
+            return true;
+        case "false":
+            return false;
+        default:
+            throw new Error(`Unable to parse boolean value "${value}"`);
+    }
+};
+exports.parseBoolean = parseBoolean;
+/*
+ * Asserts a value is a boolean and returns it.
+ *
+ * @param value A value that is expected to be a boolean.
+ * @returns The value if it's a boolean, undefined if it's null/undefined,
+ *   otherwise an error is thrown.
+ */
+const expectBoolean = (value) => {
+    if (value === null || value === undefined) {
+        return undefined;
+    }
+    if (typeof value === "boolean") {
+        return value;
+    }
+    throw new TypeError(`Expected boolean, got ${typeof value}`);
+};
+exports.expectBoolean = expectBoolean;
+/**
+ * Asserts a value is a number and returns it.
+ *
+ * @param value A value that is expected to be a number.
+ * @returns The value if it's a number, undefined if it's null/undefined,
+ *   otherwise an error is thrown.
+ */
+const expectNumber = (value) => {
+    if (value === null || value === undefined) {
+        return undefined;
+    }
+    if (typeof value === "number") {
+        return value;
+    }
+    throw new TypeError(`Expected number, got ${typeof value}`);
+};
+exports.expectNumber = expectNumber;
+/**
+ * Asserts a value is a string and returns it.
+ *
+ * @param value A value that is expected to be a string.
+ * @returns The value if it's a string, undefined if it's null/undefined,
+ *   otherwise an error is thrown.
+ */
+const expectString = (value) => {
+    if (value === null || value === undefined) {
+        return undefined;
+    }
+    if (typeof value === "string") {
+        return value;
+    }
+    throw new TypeError(`Expected string, got ${typeof value}`);
+};
+exports.expectString = expectString;
+/**
+ * Asserts a value is a number and returns it, and also converts string
+ * representations of non-numeric floats into Numbers.
+ *
+ * @param value A number or string representation of a non-numeric float.
+ * @returns The value as a number, undefined if it's null/undefined,
+ *     otherwise an error is thrown.
+ */
+const handleFloat = (value) => {
+    if (typeof value == "string") {
+        switch (value) {
+            case "NaN":
+                return NaN;
+            case "Infinity":
+                return Infinity;
+            case "-Infinity":
+                return -Infinity;
+            default:
+                throw new Error(`Unable to parse float value: ${value}`);
+        }
+    }
+    return exports.expectNumber(value);
+};
+exports.handleFloat = handleFloat;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGFyc2UtdXRpbHMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvcGFyc2UtdXRpbHMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUE7Ozs7O0dBS0c7QUFDSSxNQUFNLFlBQVksR0FBRyxDQUFDLEtBQWEsRUFBVyxFQUFFO0lBQ3JELFFBQVEsS0FBSyxFQUFFO1FBQ2IsS0FBSyxNQUFNO1lBQ1QsT0FBTyxJQUFJLENBQUM7UUFDZCxLQUFLLE9BQU87WUFDVixPQUFPLEtBQUssQ0FBQztRQUNmO1lBQ0UsTUFBTSxJQUFJLEtBQUssQ0FBQyxrQ0FBa0MsS0FBSyxHQUFHLENBQUMsQ0FBQztLQUMvRDtBQUNILENBQUMsQ0FBQztBQVRXLFFBQUEsWUFBWSxnQkFTdkI7QUFFRjs7Ozs7O0dBTUc7QUFDSSxNQUFNLGFBQWEsR0FBRyxDQUFDLEtBQVUsRUFBdUIsRUFBRTtJQUMvRCxJQUFJLEtBQUssS0FBSyxJQUFJLElBQUksS0FBSyxLQUFLLFNBQVMsRUFBRTtRQUN6QyxPQUFPLFNBQVMsQ0FBQztLQUNsQjtJQUNELElBQUksT0FBTyxLQUFLLEtBQUssU0FBUyxFQUFFO1FBQzlCLE9BQU8sS0FBSyxDQUFDO0tBQ2Q7SUFDRCxNQUFNLElBQUksU0FBUyxDQUFDLHlCQUF5QixPQUFPLEtBQUssRUFBRSxDQUFDLENBQUM7QUFDL0QsQ0FBQyxDQUFDO0FBUlcsUUFBQSxhQUFhLGlCQVF4QjtBQUVGOzs7Ozs7R0FNRztBQUNJLE1BQU0sWUFBWSxHQUFHLENBQUMsS0FBVSxFQUFzQixFQUFFO0lBQzdELElBQUksS0FBSyxLQUFLLElBQUksSUFBSSxLQUFLLEtBQUssU0FBUyxFQUFFO1FBQ3pDLE9BQU8sU0FBUyxDQUFDO0tBQ2xCO0lBQ0QsSUFBSSxPQUFPLEtBQUssS0FBSyxRQUFRLEVBQUU7UUFDN0IsT0FBTyxLQUFLLENBQUM7S0FDZDtJQUNELE1BQU0sSUFBSSxTQUFTLENBQUMsd0JBQXdCLE9BQU8sS0FBSyxFQUFFLENBQUMsQ0FBQztBQUM5RCxDQUFDLENBQUM7QUFSVyxRQUFBLFlBQVksZ0JBUXZCO0FBRUY7Ozs7OztHQU1HO0FBQ0ksTUFBTSxZQUFZLEdBQUcsQ0FBQyxLQUFVLEVBQXNCLEVBQUU7SUFDN0QsSUFBSSxLQUFLLEtBQUssSUFBSSxJQUFJLEtBQUssS0FBSyxTQUFTLEVBQUU7UUFDekMsT0FBTyxTQUFTLENBQUM7S0FDbEI7SUFDRCxJQUFJLE9BQU8sS0FBSyxLQUFLLFFBQVEsRUFBRTtRQUM3QixPQUFPLEtBQUssQ0FBQztLQUNkO0lBQ0QsTUFBTSxJQUFJLFNBQVMsQ0FBQyx3QkFBd0IsT0FBTyxLQUFLLEVBQUUsQ0FBQyxDQUFDO0FBQzlELENBQUMsQ0FBQztBQVJXLFFBQUEsWUFBWSxnQkFRdkI7QUFFRjs7Ozs7OztHQU9HO0FBQ0ksTUFBTSxXQUFXLEdBQUcsQ0FBQyxLQUFzQixFQUFzQixFQUFFO0lBQ3hFLElBQUksT0FBTyxLQUFLLElBQUksUUFBUSxFQUFFO1FBQzVCLFFBQVEsS0FBSyxFQUFFO1lBQ2IsS0FBSyxLQUFLO2dCQUNSLE9BQU8sR0FBRyxDQUFDO1lBQ2IsS0FBSyxVQUFVO2dCQUNiLE9BQU8sUUFBUSxDQUFDO1lBQ2xCLEtBQUssV0FBVztnQkFDZCxPQUFPLENBQUMsUUFBUSxDQUFDO1lBQ25CO2dCQUNFLE1BQU0sSUFBSSxLQUFLLENBQUMsZ0NBQWdDLEtBQUssRUFBRSxDQUFDLENBQUM7U0FDNUQ7S0FDRjtJQUNELE9BQU8sb0JBQVksQ0FBQyxLQUFLLENBQUMsQ0FBQztBQUM3QixDQUFDLENBQUM7QUFkVyxRQUFBLFdBQVcsZUFjdEIiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEdpdmUgYW4gaW5wdXQgc3RyaW5nLCBzdHJpY3RseSBwYXJzZXMgYSBib29sZWFuIHZhbHVlLlxuICpcbiAqIEBwYXJhbSB2YWx1ZSBUaGUgYm9vbGVhbiBzdHJpbmcgdG8gcGFyc2UuXG4gKiBAcmV0dXJucyB0cnVlIGZvciBcInRydWVcIiwgZmFsc2UgZm9yIFwiZmFsc2VcIiwgb3RoZXJ3aXNlIGFuIGVycm9yIGlzIHRocm93bi5cbiAqL1xuZXhwb3J0IGNvbnN0IHBhcnNlQm9vbGVhbiA9ICh2YWx1ZTogc3RyaW5nKTogYm9vbGVhbiA9PiB7XG4gIHN3aXRjaCAodmFsdWUpIHtcbiAgICBjYXNlIFwidHJ1ZVwiOlxuICAgICAgcmV0dXJuIHRydWU7XG4gICAgY2FzZSBcImZhbHNlXCI6XG4gICAgICByZXR1cm4gZmFsc2U7XG4gICAgZGVmYXVsdDpcbiAgICAgIHRocm93IG5ldyBFcnJvcihgVW5hYmxlIHRvIHBhcnNlIGJvb2xlYW4gdmFsdWUgXCIke3ZhbHVlfVwiYCk7XG4gIH1cbn07XG5cbi8qXG4gKiBBc3NlcnRzIGEgdmFsdWUgaXMgYSBib29sZWFuIGFuZCByZXR1cm5zIGl0LlxuICpcbiAqIEBwYXJhbSB2YWx1ZSBBIHZhbHVlIHRoYXQgaXMgZXhwZWN0ZWQgdG8gYmUgYSBib29sZWFuLlxuICogQHJldHVybnMgVGhlIHZhbHVlIGlmIGl0J3MgYSBib29sZWFuLCB1bmRlZmluZWQgaWYgaXQncyBudWxsL3VuZGVmaW5lZCxcbiAqICAgb3RoZXJ3aXNlIGFuIGVycm9yIGlzIHRocm93bi5cbiAqL1xuZXhwb3J0IGNvbnN0IGV4cGVjdEJvb2xlYW4gPSAodmFsdWU6IGFueSk6IGJvb2xlYW4gfCB1bmRlZmluZWQgPT4ge1xuICBpZiAodmFsdWUgPT09IG51bGwgfHwgdmFsdWUgPT09IHVuZGVmaW5lZCkge1xuICAgIHJldHVybiB1bmRlZmluZWQ7XG4gIH1cbiAgaWYgKHR5cGVvZiB2YWx1ZSA9PT0gXCJib29sZWFuXCIpIHtcbiAgICByZXR1cm4gdmFsdWU7XG4gIH1cbiAgdGhyb3cgbmV3IFR5cGVFcnJvcihgRXhwZWN0ZWQgYm9vbGVhbiwgZ290ICR7dHlwZW9mIHZhbHVlfWApO1xufTtcblxuLyoqXG4gKiBBc3NlcnRzIGEgdmFsdWUgaXMgYSBudW1iZXIgYW5kIHJldHVybnMgaXQuXG4gKlxuICogQHBhcmFtIHZhbHVlIEEgdmFsdWUgdGhhdCBpcyBleHBlY3RlZCB0byBiZSBhIG51bWJlci5cbiAqIEByZXR1cm5zIFRoZSB2YWx1ZSBpZiBpdCdzIGEgbnVtYmVyLCB1bmRlZmluZWQgaWYgaXQncyBudWxsL3VuZGVmaW5lZCxcbiAqICAgb3RoZXJ3aXNlIGFuIGVycm9yIGlzIHRocm93bi5cbiAqL1xuZXhwb3J0IGNvbnN0IGV4cGVjdE51bWJlciA9ICh2YWx1ZTogYW55KTogbnVtYmVyIHwgdW5kZWZpbmVkID0+IHtcbiAgaWYgKHZhbHVlID09PSBudWxsIHx8IHZhbHVlID09PSB1bmRlZmluZWQpIHtcbiAgICByZXR1cm4gdW5kZWZpbmVkO1xuICB9XG4gIGlmICh0eXBlb2YgdmFsdWUgPT09IFwibnVtYmVyXCIpIHtcbiAgICByZXR1cm4gdmFsdWU7XG4gIH1cbiAgdGhyb3cgbmV3IFR5cGVFcnJvcihgRXhwZWN0ZWQgbnVtYmVyLCBnb3QgJHt0eXBlb2YgdmFsdWV9YCk7XG59O1xuXG4vKipcbiAqIEFzc2VydHMgYSB2YWx1ZSBpcyBhIHN0cmluZyBhbmQgcmV0dXJucyBpdC5cbiAqXG4gKiBAcGFyYW0gdmFsdWUgQSB2YWx1ZSB0aGF0IGlzIGV4cGVjdGVkIHRvIGJlIGEgc3RyaW5nLlxuICogQHJldHVybnMgVGhlIHZhbHVlIGlmIGl0J3MgYSBzdHJpbmcsIHVuZGVmaW5lZCBpZiBpdCdzIG51bGwvdW5kZWZpbmVkLFxuICogICBvdGhlcndpc2UgYW4gZXJyb3IgaXMgdGhyb3duLlxuICovXG5leHBvcnQgY29uc3QgZXhwZWN0U3RyaW5nID0gKHZhbHVlOiBhbnkpOiBzdHJpbmcgfCB1bmRlZmluZWQgPT4ge1xuICBpZiAodmFsdWUgPT09IG51bGwgfHwgdmFsdWUgPT09IHVuZGVmaW5lZCkge1xuICAgIHJldHVybiB1bmRlZmluZWQ7XG4gIH1cbiAgaWYgKHR5cGVvZiB2YWx1ZSA9PT0gXCJzdHJpbmdcIikge1xuICAgIHJldHVybiB2YWx1ZTtcbiAgfVxuICB0aHJvdyBuZXcgVHlwZUVycm9yKGBFeHBlY3RlZCBzdHJpbmcsIGdvdCAke3R5cGVvZiB2YWx1ZX1gKTtcbn07XG5cbi8qKlxuICogQXNzZXJ0cyBhIHZhbHVlIGlzIGEgbnVtYmVyIGFuZCByZXR1cm5zIGl0LCBhbmQgYWxzbyBjb252ZXJ0cyBzdHJpbmdcbiAqIHJlcHJlc2VudGF0aW9ucyBvZiBub24tbnVtZXJpYyBmbG9hdHMgaW50byBOdW1iZXJzLlxuICpcbiAqIEBwYXJhbSB2YWx1ZSBBIG51bWJlciBvciBzdHJpbmcgcmVwcmVzZW50YXRpb24gb2YgYSBub24tbnVtZXJpYyBmbG9hdC5cbiAqIEByZXR1cm5zIFRoZSB2YWx1ZSBhcyBhIG51bWJlciwgdW5kZWZpbmVkIGlmIGl0J3MgbnVsbC91bmRlZmluZWQsXG4gKiAgICAgb3RoZXJ3aXNlIGFuIGVycm9yIGlzIHRocm93bi5cbiAqL1xuZXhwb3J0IGNvbnN0IGhhbmRsZUZsb2F0ID0gKHZhbHVlOiBzdHJpbmcgfCBudW1iZXIpOiBudW1iZXIgfCB1bmRlZmluZWQgPT4ge1xuICBpZiAodHlwZW9mIHZhbHVlID09IFwic3RyaW5nXCIpIHtcbiAgICBzd2l0Y2ggKHZhbHVlKSB7XG4gICAgICBjYXNlIFwiTmFOXCI6XG4gICAgICAgIHJldHVybiBOYU47XG4gICAgICBjYXNlIFwiSW5maW5pdHlcIjpcbiAgICAgICAgcmV0dXJuIEluZmluaXR5O1xuICAgICAgY2FzZSBcIi1JbmZpbml0eVwiOlxuICAgICAgICByZXR1cm4gLUluZmluaXR5O1xuICAgICAgZGVmYXVsdDpcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBVbmFibGUgdG8gcGFyc2UgZmxvYXQgdmFsdWU6ICR7dmFsdWV9YCk7XG4gICAgfVxuICB9XG4gIHJldHVybiBleHBlY3ROdW1iZXIodmFsdWUpO1xufTtcbiJdfQ==
+
+/***/ }),
+
 /***/ 2908:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -21144,6 +21248,38 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2RrLWVycm9yLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3Nkay1lcnJvci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTWV0YWRhdGFCZWFyZXIgfSBmcm9tIFwiQGF3cy1zZGsvdHlwZXNcIjtcblxuaW1wb3J0IHsgU21pdGh5RXhjZXB0aW9uIH0gZnJvbSBcIi4vZXhjZXB0aW9uXCI7XG5cbmV4cG9ydCB0eXBlIFNka0Vycm9yID0gRXJyb3IgJiBQYXJ0aWFsPFNtaXRoeUV4Y2VwdGlvbj4gJiBQYXJ0aWFsPE1ldGFkYXRhQmVhcmVyPjtcbiJdfQ==
+
+/***/ }),
+
+/***/ 422:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.serializeFloat = void 0;
+/**
+ * Serializes a number, turning non-numeric values into strings.
+ *
+ * @param value The number to serialize.
+ * @returns A number, or a string if the given number was non-numeric.
+ */
+const serializeFloat = (value) => {
+    // NaN is not equal to everything, including itself.
+    if (value !== value) {
+        return "NaN";
+    }
+    switch (value) {
+        case Infinity:
+            return "Infinity";
+        case -Infinity:
+            return "-Infinity";
+        default:
+            return value;
+    }
+};
+exports.serializeFloat = serializeFloat;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VyLXV0aWxzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3Nlci11dGlscy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQTs7Ozs7R0FLRztBQUNJLE1BQU0sY0FBYyxHQUFHLENBQUMsS0FBYSxFQUFtQixFQUFFO0lBQy9ELG9EQUFvRDtJQUNwRCxJQUFJLEtBQUssS0FBSyxLQUFLLEVBQUU7UUFDbkIsT0FBTyxLQUFLLENBQUM7S0FDZDtJQUNELFFBQVEsS0FBSyxFQUFFO1FBQ2IsS0FBSyxRQUFRO1lBQ1gsT0FBTyxVQUFVLENBQUM7UUFDcEIsS0FBSyxDQUFDLFFBQVE7WUFDWixPQUFPLFdBQVcsQ0FBQztRQUNyQjtZQUNFLE9BQU8sS0FBSyxDQUFDO0tBQ2hCO0FBQ0gsQ0FBQyxDQUFDO0FBYlcsUUFBQSxjQUFjLGtCQWF6QiIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogU2VyaWFsaXplcyBhIG51bWJlciwgdHVybmluZyBub24tbnVtZXJpYyB2YWx1ZXMgaW50byBzdHJpbmdzLlxuICpcbiAqIEBwYXJhbSB2YWx1ZSBUaGUgbnVtYmVyIHRvIHNlcmlhbGl6ZS5cbiAqIEByZXR1cm5zIEEgbnVtYmVyLCBvciBhIHN0cmluZyBpZiB0aGUgZ2l2ZW4gbnVtYmVyIHdhcyBub24tbnVtZXJpYy5cbiAqL1xuZXhwb3J0IGNvbnN0IHNlcmlhbGl6ZUZsb2F0ID0gKHZhbHVlOiBudW1iZXIpOiBzdHJpbmcgfCBudW1iZXIgPT4ge1xuICAvLyBOYU4gaXMgbm90IGVxdWFsIHRvIGV2ZXJ5dGhpbmcsIGluY2x1ZGluZyBpdHNlbGYuXG4gIGlmICh2YWx1ZSAhPT0gdmFsdWUpIHtcbiAgICByZXR1cm4gXCJOYU5cIjtcbiAgfVxuICBzd2l0Y2ggKHZhbHVlKSB7XG4gICAgY2FzZSBJbmZpbml0eTpcbiAgICAgIHJldHVybiBcIkluZmluaXR5XCI7XG4gICAgY2FzZSAtSW5maW5pdHk6XG4gICAgICByZXR1cm4gXCItSW5maW5pdHlcIjtcbiAgICBkZWZhdWx0OlxuICAgICAgcmV0dXJuIHZhbHVlO1xuICB9XG59O1xuIl19
 
 /***/ }),
 
