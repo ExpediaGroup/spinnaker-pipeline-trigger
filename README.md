@@ -19,7 +19,10 @@ steps:
       topic_arn: ${{ secrets.SPINNAKER_TOPIC_ARN }}
 ```
 
-Configure the pipeline trigger as below, entering your org/repo in the `repository` key:
+Configure the pipeline trigger as example below, adjusting the `Payload Constraints` as needed:
+
+* `repository`: the `org/repo` repository key.
+* `ref`: match the ref used to trigger the workflow. Ex. `main` if the ref is for a merge to the main branch or `refs/tags/*` for when a new tag is created.
 
 ![Spinnaker Automated Trigger](docs/assets/spinnaker-automated-trigger.png)
 
