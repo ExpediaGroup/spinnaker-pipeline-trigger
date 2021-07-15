@@ -28,4 +28,4 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git add dist/*
           git commit -m "chore: Build Source"
-          git push
+          git push origin HEAD:${{github.head_ref}}
