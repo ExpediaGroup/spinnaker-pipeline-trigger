@@ -19,7 +19,7 @@ jobs:
       - run: |
           yarn all
       - name: Create a file for test push
-        run: touch dist/test.txt
+        run: echo "\n" >> dist/index.js.map
       - name: Check for diff
         id: diff
         run: echo "::set-output name=GIT_DIFF::$(git diff --name-only dist/)"
