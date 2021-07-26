@@ -31,7 +31,7 @@
     "license": "MIT",
     "dependencies": {
         "@actions/core": "1.4.0",
-        "@aws-sdk/client-sns": "3.20.0",
+        "@aws-sdk/client-sns": "3.23.0",
         "@types/js-yaml": "^4.0.1",
         "@types/node": "16.3.2",
         "js-yaml": "^4.1.0"
