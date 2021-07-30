@@ -1,10 +1,8 @@
 name: "Test"
 on:
   pull_request:
-  push:
     branches:
       - main
-      - "releases/*"
 
 jobs:
   test: # make sure build/ci work properly
