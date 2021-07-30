@@ -11,7 +11,7 @@
         "format": "prettier --write **/*.ts",
         "format-check": "prettier --check **/*.ts",
         "lint": "eslint src/**/*.ts",
-        "package": "ncc build --source-map --license licenses.txt",
+        "package": "ncc build --source-map --no-source-map-register --license licenses.txt",
         "start": "ts-node src/index.ts",
         "test": "jest --coverage",
         "test:watch": "jest --coverage --watchAll",

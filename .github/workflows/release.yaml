@@ -19,7 +19,7 @@ jobs:
           yarn all
       - name: Check for diff
         id: diff
-        run: echo "::set-output name=GIT_DIFF::$(git diff --name-only dist/)"
+        run: echo "::set-output name=GIT_DIFF::$(git diff --name-only -- dist/)"
       - name: Push build
         if: ${{ steps.diff.outputs.GIT_DIFF != '' }}
         run: |
