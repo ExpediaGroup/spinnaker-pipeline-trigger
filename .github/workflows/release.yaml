@@ -14,6 +14,21 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v2
       - run: |
+          yarn
+      - run: |
+          yarn all
+      - name: Check for diff
+        id: diff
+        run: echo "::set-output name=GIT_DIFF::$(git diff --name-only dist/)"
+      - name: Push build
+        if: ${{ steps.diff.outputs.GIT_DIFF != '' }}
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add dist/*
+          git commit -m "chore: Build Source"
+          git push
+      - run: |
           npm install semantic-release semantic-release/git
           npx semantic-release --debug --no-ci
         env:

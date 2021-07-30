@@ -18,14 +18,3 @@ jobs:
           yarn
       - run: |
           yarn all
-      - name: Check for diff
-        id: diff
-        run: echo "::set-output name=GIT_DIFF::$(git diff --name-only dist/)"
-      - name: Push build
-        if: ${{ steps.diff.outputs.GIT_DIFF != '' }}
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          git add dist/*
-          git commit -m "chore: Build Source"
-          git push
