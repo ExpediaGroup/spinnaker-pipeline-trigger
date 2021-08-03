@@ -12,24 +12,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
       - uses: actions/setup-node@v2
       - run: |
-          yarn
-      - run: |
-          yarn all
-      - name: Check for diff
-        id: diff
-        run: echo "::set-output name=GIT_STATUS::$(git status -s dist/)"
-      - name: Push build
-        if: ${{ steps.diff.outputs.GIT_STATUS != '' }}
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          git add dist/*
-          git commit -m "chore: Build Source"
-          git push
-      - run: |
-          npm install semantic-release semantic-release/git
+          npm install semantic-release semantic-release/git semantic-release/exec
           npx semantic-release --debug --no-ci
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
