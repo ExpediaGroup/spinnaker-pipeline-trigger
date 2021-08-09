@@ -25,12 +25,6 @@ plugins:
           release: false
   - "@semantic-release/release-notes-generator"
   - "@semantic-release/github"
-  - - "@semantic-release/exec"
-    - "prepareCmd": "yarn build && yarn package"
-  - - "@semantic-release/git"
-    - "assets":
-        - "dist/**/*.{js,js.map}"
-      "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
 release:
   branches:
     - main
