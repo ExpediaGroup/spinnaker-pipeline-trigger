@@ -40,7 +40,7 @@
         "@types/jest": "27.0.2",
         "@types/mock-fs": "4.13.1",
         "@types/source-map-support": "0.5.4",
-        "@typescript-eslint/eslint-plugin": "4.29.0",
+        "@typescript-eslint/eslint-plugin": "4.33.0",
         "@typescript-eslint/parser": "4.33.0",
         "@vercel/ncc": "0.29.0",
         "eslint": "7.32.0",
