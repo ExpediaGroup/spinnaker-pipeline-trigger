@@ -15,7 +15,6 @@
         "start": "ts-node src/index.ts",
         "test": "jest --coverage",
         "test:watch": "jest --coverage --watchAll",
-        "view:coverage": "serve coverage/lcov-report",
         "all": "yarn build && yarn format && yarn lint && yarn package && yarn test"
     },
     "repository": {
@@ -53,7 +52,6 @@
         "nyc": "15.1.0",
         "onchange": "7.1.0",
         "prettier": "2.3.2",
-        "serve": "12.0.0",
         "source-map-support": "0.5.19",
         "ts-jest": "27.0.4",
         "ts-mockito": "2.6.1",
