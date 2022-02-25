@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3.0.0
       - run: | 
           yarn
       - run: |
