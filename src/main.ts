@@ -17,9 +17,10 @@ limitations under the License.
 import * as core from '@actions/core'
 import * as yaml from 'js-yaml'
 import {
-  SNSClient,
   PublishCommand,
-  PublishCommandInput
+  PublishInput,
+  SNSServiceException,
+  SNSClient
 } from '@aws-sdk/client-sns'
 
 async function publish(
@@ -29,7 +30,7 @@ async function publish(
 ): Promise<string> {
   const messageString = JSON.stringify(message)
   core.debug(messageString)
-  const input: PublishCommandInput = {
+  const input: PublishInput = {
     Message: messageString,
     TopicArn: topicArn
   }
@@ -80,7 +81,7 @@ export async function run(): Promise<void> {
     core.debug(JSON.stringify(message))
     await publish(message, topicArn, region)
   } catch (error) {
-    core.warning('Failed to publish message.')
-    core.setFailed(error.message)
+    if (error instanceof SNSServiceException) core.warning(error.message)
+    core.setFailed('Failed to publish message.')
   }
 }
