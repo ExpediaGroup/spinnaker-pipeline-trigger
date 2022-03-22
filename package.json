@@ -33,7 +33,7 @@
         "@actions/core": "1.6.0",
         "@aws-sdk/client-sns": "3.53.0",
         "@types/js-yaml": "^4.0.5",
-        "@types/node": "17.0.21",
+        "@types/node": "17.0.22",
         "js-yaml": "^4.1.0"
     },
     "devDependencies": {
