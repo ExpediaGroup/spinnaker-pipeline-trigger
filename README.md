@@ -55,6 +55,24 @@ Parameters are automatically added to `Parameters` of the pipeline. There is no 
 
 ![Spinnaker Parameter Config](docs/assets/custom-parameters.png)
 
+### Message Attributes
+
+To trigger a particular pipeline in a Spinnaker project with multiple pipelines, include the `message_attributes` input.
+Then add the corresponding message attributes to the `Payload Constraints` of the pipeline you wish to trigger.
+
+```yaml
+steps:
+  - name: Spinnaker
+    uses: ExpediaGroup/spinnaker-pipeline-trigger@v1
+    with:
+      topic_arn: ${{ secrets.SPINNAKER_TOPIC_ARN }}
+      parameters: |
+        parameter1: value1
+      message_attributes: awesome-attribute
+```
+
+![Spinnaker Parameter Config](docs/assets/message-attributes.png)
+
 ## Requirements
 
 This action uses SNS to send the message to Spinnaker. Permissions and configuraiton are needed for the runner and Spinnaker.
