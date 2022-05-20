@@ -71,7 +71,7 @@ steps:
       message_attributes: awesome-attribute
 ```
 
-![Spinnaker Parameter Config](docs/assets/message-attributes.png)
+![Spinnaker Message Attributes](docs/assets/message-attributes.png)
 
 ## Requirements
 
