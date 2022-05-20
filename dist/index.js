@@ -102,7 +102,7 @@ function constructMessage() {
     const githubEventName = process.env.GITHUB_EVENT_NAME || '';
     const githubActor = process.env.GITHUB_ACTOR || '';
     const parameters = yaml.load(core.getInput('parameters')) || {};
-    const messageAttributes = core.getInput('message_attributes') || {};
+    const messageAttributes = yaml.load(core.getInput('message_attributes')) || {};
     return {
         repository,
         commit,
