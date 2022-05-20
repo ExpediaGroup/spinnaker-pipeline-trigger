@@ -23,11 +23,7 @@ limitations under the License.
 */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -108,9 +104,8 @@ function run() {
             yield publish(message, topicArn, region);
         }
         catch (error) {
-            if (error instanceof client_sns_1.SNSServiceException)
-                core.warning(error.message);
-            core.setFailed('Failed to publish message.');
+            core.warning('Failed to publish message.');
+            core.setFailed(error.message);
         }
     });
 }
@@ -26890,7 +26885,7 @@ limitations under the License.
 */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const main_1 = __nccwpck_require__(3109);
-(0, main_1.run)();
+main_1.run();
 //# sourceMappingURL=index.js.map
 })();
 
