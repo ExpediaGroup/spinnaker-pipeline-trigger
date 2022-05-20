@@ -53,7 +53,7 @@ function constructMessage(): object {
   const githubEventName = process.env.GITHUB_EVENT_NAME || ''
   const githubActor = process.env.GITHUB_ACTOR || ''
   const parameters = yaml.load(core.getInput('parameters')) || {}
-  const messageAttributes = core.getInput('message_attributes') || {}
+  const messageAttributes = core.getInput('message_attributes') || ''
 
   return {
     repository,
