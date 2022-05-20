@@ -41,7 +41,7 @@ describe('Publish', () => {
 
     const input = {
       Message:
-        '{"repository":"Org/actions-test-trigger","commit":"long-sha","ref":"main","githubEventName":"","githubActor":"","githubAction":"","parameters":{},"messageAttributes":{}}',
+        '{"repository":"Org/actions-test-trigger","commit":"long-sha","ref":"main","githubEventName":"","githubActor":"","githubAction":"","parameters":{},"messageAttributes":""}',
       TopicArn: 'arn:aws:sns:us-west-2:123456789123:spinnaker-github-actions'
     }
 
@@ -61,7 +61,7 @@ describe('Publish', () => {
 
     const input = {
       Message:
-        '{"repository":"Org/actions-test-trigger","commit":"long-sha","ref":"","githubEventName":"","githubActor":"","githubAction":"","parameters":{},"messageAttributes":{}}',
+        '{"repository":"Org/actions-test-trigger","commit":"long-sha","ref":"","githubEventName":"","githubActor":"","githubAction":"","parameters":{},"messageAttributes":""}',
       TopicArn: 'arn:aws:sns:us-west-2:123456789123:spinnaker-github-actions'
     }
 
@@ -77,11 +77,11 @@ describe('Publish', () => {
     // Arrange
     const region = 'us-west-2'
     process.env.INPUT_PARAMETERS = 'parameter1: value1\nparameter2: value2'
-    process.env.INPUT_MESSAGE_ATTRIBUTES = 'attribute: my attribute'
+    process.env.INPUT_MESSAGE_ATTRIBUTES = 'my-attribute'
 
     const input = {
       Message:
-        '{"repository":"Org/actions-test-trigger","commit":"long-sha","ref":"main","githubEventName":"","githubActor":"","githubAction":"","parameters":{"parameter1":"value1","parameter2":"value2"},"messageAttributes":{"attribute":"my attribute"}}',
+        '{"repository":"Org/actions-test-trigger","commit":"long-sha","ref":"main","githubEventName":"","githubActor":"","githubAction":"","parameters":{"parameter1":"value1","parameter2":"value2"},"messageAttributes":"my-attribute"}',
       TopicArn: 'arn:aws:sns:us-west-2:123456789123:spinnaker-github-actions'
     }
 
