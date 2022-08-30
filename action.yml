@@ -1,3 +1,4 @@
+---
 name: "spinnaker-pipeline-trigger"
 description: "Triggers Spinnaker pipelines using AWS SNS"
 author: "ExpediaGroup"
