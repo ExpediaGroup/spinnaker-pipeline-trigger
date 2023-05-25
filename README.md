@@ -24,18 +24,20 @@ Configure the pipeline trigger as example below, adjusting the `Payload Constrai
 * `repository`: the `org/repo` repository key.
 * `ref`: match the ref used to trigger the workflow. Ex. `main` if the ref is for a merge to the main branch or `refs/tags/*` for when a new tag is created.
 
+NOTE: The `Payload Constraints` fields are regex values. To only include a specific `repository`, `ref`, or other constraint, be specific. Example: `^AwesomeOrg/awesome-repo$` to include ONLY that repository.
+
 ![Spinnaker Automated Trigger](docs/assets/spinnaker-automated-trigger.png)
 
 ### Default Parameters
 
 The action sends the following information in the payload:
 
-- repository: The owner and repository name. For example, `octocat/Hello-World`.
-- commit: The commit SHA that triggered the workflow. For example, `ffac537e6cbbf934b08745a378932722df287a53`.
-- ref: The branch or tag ref that triggered the workflow. For example, `refs/heads/feature-branch-1`. If neither a branch or tag is available for the event type, the variable will not exist.
-- githubEventName: The name of the webhook event that triggered the workflow.
-- githubActor: The name of the person or app that initiated the workflow. For example, octocat.
-- githubAction: Always set to true when GitHub Actions is running the workflow. You can use this variable to differentiate when tests are being run locally or by GitHub Actions.
+* repository: The owner and repository name. For example, `octocat/Hello-World`.
+* commit: The commit SHA that triggered the workflow. For example, `ffac537e6cbbf934b08745a378932722df287a53`.
+* ref: The branch or tag ref that triggered the workflow. For example, `refs/heads/feature-branch-1`. If neither a branch or tag is available for the event type, the variable will not exist.
+* githubEventName: The name of the webhook event that triggered the workflow.
+* githubActor: The name of the person or app that initiated the workflow. For example, octocat.
+* githubAction: Always set to true when GitHub Actions is running the workflow. You can use this variable to differentiate when tests are being run locally or by GitHub Actions.
 
 ### Additional Parameters
 
@@ -85,9 +87,9 @@ The runner requires `sns:Publish` permissions. If using a public runner, somethi
 
 Follow Spinnaker's directions for [setting up a topic and queue](https://spinnaker.io/setup/triggers/amazon/) with the following modifications.
 
-- Do not set up the S3 notification
-- `messageFormat` should be `CUSTOM`
-- Include the template below with the `echo` portion of the config.
+* Do not set up the S3 notification
+* `messageFormat` should be `CUSTOM`
+* Include the template below with the `echo` portion of the config.
 
 Sample message format based on the default parameters being sent:
 
@@ -111,6 +113,6 @@ The scripts and documentation in this project are released under the [Apache 2 L
 
 ## Contributions
 
-- Run `yarn all` locally before committing.
-- Coverage limits are set at 90%.
-- Follow semantic-release commit formatting.
+* Run `yarn all` locally before committing.
+* Coverage limits are set at 90%.
+* Follow semantic-release commit formatting.
