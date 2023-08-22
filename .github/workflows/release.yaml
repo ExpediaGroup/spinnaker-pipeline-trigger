@@ -19,7 +19,7 @@ jobs:
         uses: google-github-actions/release-please-action@v3
         with:
           command: manifest
-      - if: steps.release.outputs.releases_created && inputs.publish-workflow != ''
+      - if: steps.release.outputs.releases_created
         name: Trigger Publish
         uses: actions/github-script@v6
         with:
@@ -29,6 +29,6 @@ jobs:
             github.rest.actions.createWorkflowDispatch({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              workflow_id: '${{ inputs.publish-workflow }}',
+              workflow_id: 'publish.yaml',
               ref: '${{ steps.release.outputs.tag_name }}'
             })
