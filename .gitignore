@@ -104,3 +104,5 @@ src/**/*.js
 src/**/*.map
 
 lib/
+
+.yarn/
