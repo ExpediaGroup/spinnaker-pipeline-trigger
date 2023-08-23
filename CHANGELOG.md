@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/compare/v1.1.0...v1.1.1) (2023-08-23)
+
+
+### Bug Fixes
+
+* **deps:** bump @aws-sdk/client-sns from 3.160.0 to 3.395.0 ([#415](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/issues/415)) ([869c720](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/commit/869c720546fb51bfceeab43ee9e9e8c24fa13de3))
+
 ## [1.1.0](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/compare/v1.0.3...v1.1.0) (2023-08-22)
 
 
