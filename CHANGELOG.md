@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.2](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/compare/v1.1.1...v1.1.2) (2023-08-24)
+
+
+### Bug Fixes
+
+* **ci:** Correct output syntax ([#432](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/issues/432)) ([976d212](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/commit/976d212e4c6b7ac0c0d2eedfdbf5239d7ff1d551))
+* **deps:** bump @types/node from 20.5.3 to 20.5.4 ([#427](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/issues/427)) ([adcf6e5](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/commit/adcf6e5e668964770bffaf8fabe4a855aad46af1))
+
 ## [1.1.1](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/compare/v1.1.0...v1.1.1) (2023-08-23)
 
 
