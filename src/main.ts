@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 import * as core from '@actions/core'
+import * as github from '@actions/github'
 import * as yaml from 'js-yaml'
 import {
   PublishCommand,
@@ -22,6 +23,13 @@ import {
   SNSServiceException,
   SNSClient
 } from '@aws-sdk/client-sns'
+
+const SNS_MESSAGE_SIZE_LIMIT_BYTES = 256000
+
+interface GitHubFile {
+  filename: string
+  status: string
+}
 
 async function publish(
   message: object,
@@ -45,26 +53,67 @@ async function publish(
   return JSON.stringify(response.MessageId)
 }
 
-function constructMessage(): object {
+async function constructMessage(): Promise<object> {
   const repository = process.env.GITHUB_REPOSITORY
   const commit = process.env.GITHUB_SHA
+  const githubApiUrl = process.env.GITHUB_API_URL
   const ref = process.env.GITHUB_REF || ''
   const githubAction = process.env.GITHUB_ACTION || ''
   const githubEventName = process.env.GITHUB_EVENT_NAME || ''
   const githubActor = process.env.GITHUB_ACTOR || ''
   const parameters = yaml.load(core.getInput('parameters')) || {}
   const messageAttributes = core.getInput('message_attributes') || ''
+  const modifiedFiles = await getModifiedFiles()
 
-  return {
+  const message = {
     repository,
     commit,
+    githubApiUrl,
     ref,
     githubEventName,
     githubActor,
     githubAction,
     parameters,
-    messageAttributes
+    messageAttributes,
+    modifiedFiles
   }
+
+  // SNS message size limit is 256 KB
+  if (
+    Buffer.byteLength(JSON.stringify(message)) > SNS_MESSAGE_SIZE_LIMIT_BYTES
+  ) {
+    core.warning(
+      'SNS message size limit exceeded, removing modifiedFiles from message'
+    )
+    message.modifiedFiles = []
+  }
+
+  return message
+}
+
+async function getModifiedFiles(): Promise<string[]> {
+  const token = core.getInput('github_token')
+  if (!token) {
+    core.debug(
+      'No github token provided, defaulting to empty list of modified files'
+    )
+    return []
+  }
+  const octokit = github.getOctokit(token)
+  const { data } = await octokit.rest.repos.getCommit({
+    owner: github.context.repo.owner,
+    repo: github.context.repo.repo,
+    ref: github.context.sha
+  })
+  if (!data.files) {
+    core.debug('No files found in getCommit response')
+    return []
+  }
+  const files = data.files
+    .filter((file: GitHubFile) => file.status !== 'removed')
+    .map((file: GitHubFile) => file.filename)
+  core.debug(`Found ${files.length} changed files`)
+  return files
 }
 
 export async function run(): Promise<void> {
@@ -77,7 +126,7 @@ export async function run(): Promise<void> {
     if (!topicArn) {
       throw new Error('Topic ARN is required.')
     }
-    const message = constructMessage()
+    const message = await constructMessage()
     core.debug(JSON.stringify(message))
     await publish(message, topicArn, region)
   } catch (error) {

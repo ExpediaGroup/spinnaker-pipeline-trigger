@@ -16,6 +16,7 @@ steps:
   - name: Spinnaker
     uses: ExpediaGroup/spinnaker-pipeline-trigger@v1
     with:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
       topic_arn: ${{ secrets.SPINNAKER_TOPIC_ARN }}
 ```
 
@@ -38,6 +39,8 @@ The action sends the following information in the payload:
 * githubEventName: The name of the webhook event that triggered the workflow.
 * githubActor: The name of the person or app that initiated the workflow. For example, octocat.
 * githubAction: Always set to true when GitHub Actions is running the workflow. You can use this variable to differentiate when tests are being run locally or by GitHub Actions.
+* githubApiUrl: The base URL for the REST API endpoint for your GitHub instance. For example, `https://api.github.com`. This is used to construct Artifact objects for each of the modified or added files when present.
+* modifiedFiles: A list of all the modified or added files in the commmit that triggered the workflow. For example, `["README.md", ".github/workflows/release.yaml"]`. If the `github_token` parameter is missing from the step config, or if the list of modified files is so large the SNS message body would exceed 256 KB, this value is set to an empty list instead.
 
 ### Additional Parameters
 
@@ -48,6 +51,7 @@ steps:
   - name: Spinnaker
     uses: ExpediaGroup/spinnaker-pipeline-trigger@v1
     with:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
       topic_arn: ${{ secrets.SPINNAKER_TOPIC_ARN }}
       parameters: |
         parameter1: value1
@@ -67,6 +71,7 @@ steps:
   - name: Spinnaker
     uses: ExpediaGroup/spinnaker-pipeline-trigger@v1
     with:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
       topic_arn: ${{ secrets.SPINNAKER_TOPIC_ARN }}
       parameters: |
         parameter1: value1
@@ -89,21 +94,21 @@ Follow Spinnaker's directions for [setting up a topic and queue](https://spinnak
 
 * Do not set up the S3 notification
 * `messageFormat` should be `CUSTOM`
-* Include the template below with the `echo` portion of the config.
+* Include the template below with the `echo` portion of the config to receive GitHub file artifacts on the triggered pipelines. If you are running Echo in sharded mode, this config should be included in the scheduler instances.
 
 Sample message format based on the default parameters being sent:
-
 ```json
 [
+  {% for item in modifiedFiles %}
   {
-    "reference": "{{ reference }}",
-    "repository": "{{ repository }}",
-    "commit": "{{ commit }}",
-    "ref": "{{ ref }}",
-    "githubEventName": "{{ githubEventName }}",
-    "githubActor": "{{ githubActor }}",
-    "githubAction": "{{ githubAction }}"
-  }
+    "customKind": false,
+    "reference": "{{ githubApiUrl }}/repos/{{ repository }}/contents/{{ item }}",
+    "metadata": {},
+    "name": "{{ item }}",
+    "type": "github/file",
+    "version": "{{ commit }}"
+  }{% if not loop.last %},{% endif %}
+  {% endfor %}
 ]
 ```
 
