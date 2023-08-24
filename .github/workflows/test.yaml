@@ -21,11 +21,13 @@ jobs:
           yarn
       - run: |
           yarn all
-      - name: Check for diff
-        id: diff
-        run: echo "GIT_STATUS=$(git status -s dist/)" >> "$GITHUB_OUTPUT"
+      - name: Changed files
+        uses: tj-actions/changed-files@v37
+        id: changed-files
+        with:
+          files: dist/*
       - name: Push build
-        if: ${{ steps.diff.outputs.GIT_STATUS != '' }}
+        if: ${{ steps.changed-files.outputs.GIT_STATUS != '' }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
