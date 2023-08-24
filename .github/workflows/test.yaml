@@ -23,7 +23,7 @@ jobs:
           yarn all
       - name: Check for diff
         id: diff
-        run: echo "{GIT_STATUS}=$(git status -s dist/)" >> $GITHUB_OUTPUT
+        run: echo "GIT_STATUS=$(git status -s dist/)" >> $GITHUB_OUTPUT
       - name: Push build
         if: ${{ steps.diff.outputs.GIT_STATUS != '' }}
         run: |
