@@ -25,9 +25,9 @@ jobs:
         uses: tj-actions/changed-files@v37
         id: changed-files
         with:
-          files: dist/*
+          files: dist
       - name: Push build
-        if: ${{ steps.changed-files.outputs.GIT_STATUS != '' }}
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
