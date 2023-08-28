@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/compare/v1.1.2...v1.2.0) (2023-08-28)
+
+
+### Features
+
+* **artifacts:** Add support for trigger artifacts ([#430](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/issues/430)) ([2d2f763](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/commit/2d2f76390f418ff618d4db6a1308d3ca7b671ec8))
+
 ## [1.1.2](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/compare/v1.1.1...v1.1.2) (2023-08-24)
 
 
