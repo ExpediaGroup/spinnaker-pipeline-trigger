@@ -23,9 +23,11 @@ jobs:
           yarn all
       - name: Check for diff
         id: diff
-        run: echo "GIT_STATUS=$(git status -s dist/)" >> $GITHUB_OUTPUT
+        run: |
+          git status -s dist/ | grep "dist/"
+          echo "GIT_STATUS=$?" >> "$GITHUB_OUTPUT"
       - name: Push build
-        if: ${{ steps.diff.outputs.GIT_STATUS != '' }}
+        if: ${{ steps.diff.outputs.GIT_STATUS == '0' }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
