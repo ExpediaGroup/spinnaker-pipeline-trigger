@@ -24,10 +24,10 @@ jobs:
       - name: Check for diff
         id: diff
         run: |
-          git status -s dist/ | grep "dist/"
-          echo "GIT_STATUS=$?" >> "$GITHUB_OUTPUT"
+          git status -s dist/ | grep "dist/" || echo "SHOULD_PUSH_BUILD=false" >> "$GITHUB_OUTPUT
+          echo "SHOULD_PUSH_BUILD=true" >> "$GITHUB_OUTPUT"
       - name: Push build
-        if: ${{ steps.diff.outputs.GIT_STATUS == '0' }}
+        if: ${{ steps.diff.outputs.SHOULD_PUSH_BUILD == 'true' }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
