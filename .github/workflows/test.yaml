@@ -24,7 +24,7 @@ jobs:
       - name: Check for diff
         id: diff
         run: |
-          if [ git status -s dist/ | grep "dist/" ]; then
+          if git status -s dist/ | grep "dist/"); then
             echo "SHOULD_PUSH_BUILD=true" >> "$GITHUB_OUTPUT"
           else
             echo "SHOULD_PUSH_BUILD=false" >> "$GITHUB_OUTPUT"
