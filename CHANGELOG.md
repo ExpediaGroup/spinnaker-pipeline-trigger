@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.2.1](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/compare/v1.2.0...v1.2.1) (2023-08-29)
+
+
+### Bug Fixes
+
+* Fix test workflow to not error if grep fails ([dd0fa89](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/commit/dd0fa8923b7d816720eaca60e942c75e25c10784))
+* forgot the end parenthesis ([8fd1d82](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/commit/8fd1d82ac6a6d15102b3bb850dcb70dcb01e53c9))
+* forgot to add new input to action.yml ([bba71f8](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/commit/bba71f838904d84b35452c0537d7c5328f0e370c))
+* just use an if statement ([9e43082](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/commit/9e43082d9a27f2e0857240573116701ee2e3e198))
+* Remove [] operator from if statement ([29002db](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/commit/29002db31c4ad9da85f88e087760d6ae1e904da7))
+
 ## [1.2.0](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/compare/v1.1.2...v1.2.0) (2023-08-28)
 
 
