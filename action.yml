@@ -16,6 +16,9 @@ inputs:
     description: AWS Region
     required: false
     default: us-west-2
+  github_token:
+    description: Repo token for fetching commit details
+    required: false
 runs:
   using: "node16"
   main: "dist/index.js"
