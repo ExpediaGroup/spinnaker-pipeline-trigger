@@ -98,7 +98,7 @@ function constructMessage() {
                 return line;
             const key = line.substring(0, idx + 2);
             const value = line.substring(idx + 2);
-            return key + "'" + value.replace(/'/g, "''") + "'";
+            return `${key}'${value.replace(/'/g, "''")}'`;
         })
             .join('\n');
         const parameters = yaml.load(sanitized) || {};
