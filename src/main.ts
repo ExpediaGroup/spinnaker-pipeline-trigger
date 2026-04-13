@@ -17,12 +17,7 @@ limitations under the License.
 import * as core from '@actions/core'
 import * as github from '@actions/github'
 import * as yaml from 'js-yaml'
-import {
-  PublishCommand,
-  PublishInput,
-  SNSServiceException,
-  SNSClient
-} from '@aws-sdk/client-sns'
+import { PublishCommand, PublishInput, SNSClient } from '@aws-sdk/client-sns'
 
 const SNS_MESSAGE_SIZE_LIMIT_BYTES = 256000
 
@@ -61,7 +56,22 @@ async function constructMessage(): Promise<object> {
   const githubAction = process.env.GITHUB_ACTION || ''
   const githubEventName = process.env.GITHUB_EVENT_NAME || ''
   const githubActor = process.env.GITHUB_ACTOR || ''
-  const parameters = yaml.load(core.getInput('parameters')) || {}
+  // Single-quote all parameter values before yaml.load() to prevent:
+  // - Parse errors from `: `, `#`, `{`, `[`, `!`, `&`, `*`, etc. in values
+  // - Silent type conversion of `true`/`false`/`null`/numbers to non-strings
+  // - Silent truncation from `#` being interpreted as a comment
+  const rawParameters = core.getInput('parameters')
+  const sanitized = rawParameters
+    .split('\n')
+    .map(line => {
+      const idx = line.indexOf(': ')
+      if (idx === -1) return line
+      const key = line.substring(0, idx + 2)
+      const value = line.substring(idx + 2)
+      return `${key}'${value.replace(/'/g, "''")}'`
+    })
+    .join('\n')
+  const parameters = yaml.load(sanitized) || {}
   const messageAttributes = core.getInput('message_attributes') || ''
   const modifiedFiles = await getModifiedFiles()
 
@@ -130,7 +140,7 @@ export async function run(): Promise<void> {
     core.debug(JSON.stringify(message))
     await publish(message, topicArn, region)
   } catch (error) {
-    if (error instanceof SNSServiceException) core.warning(error.message)
+    if (error instanceof Error) core.warning(error.message)
     core.setFailed('Failed to publish message.')
   }
 }
