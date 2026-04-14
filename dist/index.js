@@ -85,23 +85,7 @@ function constructMessage() {
         const githubAction = process.env.GITHUB_ACTION || '';
         const githubEventName = process.env.GITHUB_EVENT_NAME || '';
         const githubActor = process.env.GITHUB_ACTOR || '';
-        // Single-quote all parameter values before yaml.load() to prevent:
-        // - Parse errors from `: `, `#`, `{`, `[`, `!`, `&`, `*`, etc. in values
-        // - Silent type conversion of `true`/`false`/`null`/numbers to non-strings
-        // - Silent truncation from `#` being interpreted as a comment
-        const rawParameters = core.getInput('parameters');
-        const sanitized = rawParameters
-            .split('\n')
-            .map(line => {
-            const idx = line.indexOf(': ');
-            if (idx === -1)
-                return line;
-            const key = line.substring(0, idx + 2);
-            const value = line.substring(idx + 2);
-            return `${key}'${value.replace(/'/g, "''")}'`;
-        })
-            .join('\n');
-        const parameters = yaml.load(sanitized) || {};
+        const parameters = yaml.load(core.getInput('parameters')) || {};
         const messageAttributes = core.getInput('message_attributes') || '';
         const modifiedFiles = yield getModifiedFiles();
         const message = {
@@ -162,7 +146,7 @@ function run() {
             yield publish(message, topicArn, region);
         }
         catch (error) {
-            if (error instanceof Error)
+            if (error instanceof client_sns_1.SNSServiceException)
                 core.warning(error.message);
             core.setFailed('Failed to publish message.');
         }
