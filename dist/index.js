@@ -60,6 +60,38 @@ const github = __importStar(__nccwpck_require__(95438));
 const yaml = __importStar(__nccwpck_require__(21917));
 const client_sns_1 = __nccwpck_require__(15753);
 const SNS_MESSAGE_SIZE_LIMIT_BYTES = 256000;
+/**
+ * Single-quote parameter values so yaml.load() treats them as literal strings.
+ *
+ * Prevents parse errors from `: `, `#`, `{`, `[`, `!`, `&`, `*`, etc.,
+ * silent type conversion of `true`/`false`/`null`/numbers, and silent
+ * truncation from `#` being interpreted as a comment.
+ *
+ * Guards: skip indented lines (block scalar continuations), block scalar
+ * indicators (|, >), and values already wrapped in matching quotes.
+ */
+function quoteParameterValues(raw) {
+    return raw
+        .split('\n')
+        .map(line => {
+        // Skip indented continuation lines (part of multi-line block scalars)
+        if (/^\s/.test(line))
+            return line;
+        const idx = line.indexOf(': ');
+        if (idx === -1)
+            return line;
+        const key = line.substring(0, idx + 2);
+        const value = line.substring(idx + 2);
+        // Don't quote block scalar indicators (|, >, |-, >+, |2, etc.)
+        if (/^[|>][-+]?\d*[-+]?\s*$/.test(value))
+            return line;
+        // Don't quote values already wrapped in matching quotes
+        if (/^'.*'$/.test(value) || /^".*"$/.test(value))
+            return line;
+        return `${key}'${value.replace(/'/g, "''")}'`;
+    })
+        .join('\n');
+}
 function publish(message, topicArn, region) {
     return __awaiter(this, void 0, void 0, function* () {
         const messageString = JSON.stringify(message);
@@ -85,34 +117,8 @@ function constructMessage() {
         const githubAction = process.env.GITHUB_ACTION || '';
         const githubEventName = process.env.GITHUB_EVENT_NAME || '';
         const githubActor = process.env.GITHUB_ACTOR || '';
-        // Single-quote parameter values before yaml.load() to prevent:
-        // - Parse errors from `: `, `#`, `{`, `[`, `!`, `&`, `*`, etc. in values
-        // - Silent type conversion of `true`/`false`/`null`/numbers to non-strings
-        // - Silent truncation from `#` being interpreted as a comment
-        // Guards: skip indented lines (block scalar continuations), block scalar
-        // indicators (|, >), and values already wrapped in matching quotes.
         const rawParameters = core.getInput('parameters');
-        const sanitized = rawParameters
-            .split('\n')
-            .map(line => {
-            // Skip indented continuation lines (part of multi-line block scalars)
-            if (/^\s/.test(line))
-                return line;
-            const idx = line.indexOf(': ');
-            if (idx === -1)
-                return line;
-            const key = line.substring(0, idx + 2);
-            const value = line.substring(idx + 2);
-            // Don't quote block scalar indicators (|, >, |-, >+, |2, etc.)
-            if (/^[|>][-+]?\d*[-+]?\s*$/.test(value))
-                return line;
-            // Don't quote values already wrapped in matching quotes
-            if (/^'.*'$/.test(value) || /^".*"$/.test(value))
-                return line;
-            return `${key}'${value.replace(/'/g, "''")}'`;
-        })
-            .join('\n');
-        const parameters = yaml.load(sanitized) || {};
+        const parameters = yaml.load(quoteParameterValues(rawParameters)) || {};
         const messageAttributes = core.getInput('message_attributes') || '';
         const modifiedFiles = yield getModifiedFiles();
         const message = {
