@@ -120,6 +120,114 @@ describe('Publish', () => {
     expect(mockedGetCommit).not.toHaveBeenCalled()
   })
 
+  test('With Parameters containing colons in values', async () => {
+    // Arrange
+    const region = 'us-west-2'
+    process.env.INPUT_PARAMETERS =
+      'version: abc123\ndescription: feat(RCP-11827): RCP Migration of lom-cas-service (#162)'
+
+    const input = {
+      Message:
+        '{"repository":"Org/actions-test-trigger","commit":"long-sha","githubApiUrl":"https://api.github.com","ref":"main","githubEventName":"","githubActor":"","githubAction":"","parameters":{"version":"abc123","description":"feat(RCP-11827): RCP Migration of lom-cas-service (#162)"},"messageAttributes":"","modifiedFiles":[]}',
+      TopicArn: 'arn:aws:sns:us-west-2:123456789123:spinnaker-github-actions'
+    }
+
+    // Act
+    await run()
+
+    // Assert
+    expect(SNSClient).toBeCalledWith({ region })
+    expect(PublishCommand).toBeCalledWith(input)
+    expect(mockedSend).toBeCalledTimes(1)
+    expect(mockedGetCommit).not.toHaveBeenCalled()
+  })
+
+  test('With Parameters containing hash, boolean-like, and single quotes in values', async () => {
+    // Arrange
+    const region = 'us-west-2'
+    process.env.INPUT_PARAMETERS =
+      "description: deploy #42\nenabled: true\nmessage: it's working"
+
+    const input = {
+      Message:
+        '{"repository":"Org/actions-test-trigger","commit":"long-sha","githubApiUrl":"https://api.github.com","ref":"main","githubEventName":"","githubActor":"","githubAction":"","parameters":{"description":"deploy #42","enabled":"true","message":"it\'s working"},"messageAttributes":"","modifiedFiles":[]}',
+      TopicArn: 'arn:aws:sns:us-west-2:123456789123:spinnaker-github-actions'
+    }
+
+    // Act
+    await run()
+
+    // Assert
+    expect(SNSClient).toBeCalledWith({ region })
+    expect(PublishCommand).toBeCalledWith(input)
+    expect(mockedSend).toBeCalledTimes(1)
+    expect(mockedGetCommit).not.toHaveBeenCalled()
+  })
+
+  test('With Parameters containing a block scalar value', async () => {
+    // Arrange
+    const region = 'us-west-2'
+    process.env.INPUT_PARAMETERS =
+      'version: abc123\ndescription: |-\n  TCP-14899: Add preconditions'
+
+    const input = {
+      Message:
+        '{"repository":"Org/actions-test-trigger","commit":"long-sha","githubApiUrl":"https://api.github.com","ref":"main","githubEventName":"","githubActor":"","githubAction":"","parameters":{"version":"abc123","description":"TCP-14899: Add preconditions"},"messageAttributes":"","modifiedFiles":[]}',
+      TopicArn: 'arn:aws:sns:us-west-2:123456789123:spinnaker-github-actions'
+    }
+
+    // Act
+    await run()
+
+    // Assert
+    expect(SNSClient).toBeCalledWith({ region })
+    expect(PublishCommand).toBeCalledWith(input)
+    expect(mockedSend).toBeCalledTimes(1)
+    expect(mockedGetCommit).not.toHaveBeenCalled()
+  })
+
+  test('With Parameters containing already single-quoted values', async () => {
+    // Arrange
+    const region = 'us-west-2'
+    process.env.INPUT_PARAMETERS = "description: 'already quoted'"
+
+    const input = {
+      Message:
+        '{"repository":"Org/actions-test-trigger","commit":"long-sha","githubApiUrl":"https://api.github.com","ref":"main","githubEventName":"","githubActor":"","githubAction":"","parameters":{"description":"already quoted"},"messageAttributes":"","modifiedFiles":[]}',
+      TopicArn: 'arn:aws:sns:us-west-2:123456789123:spinnaker-github-actions'
+    }
+
+    // Act
+    await run()
+
+    // Assert
+    expect(SNSClient).toBeCalledWith({ region })
+    expect(PublishCommand).toBeCalledWith(input)
+    expect(mockedSend).toBeCalledTimes(1)
+    expect(mockedGetCommit).not.toHaveBeenCalled()
+  })
+
+  test('With Parameters containing already double-quoted values', async () => {
+    // Arrange
+    const region = 'us-west-2'
+    process.env.INPUT_PARAMETERS = 'description: "already quoted"'
+
+    const input = {
+      Message:
+        '{"repository":"Org/actions-test-trigger","commit":"long-sha","githubApiUrl":"https://api.github.com","ref":"main","githubEventName":"","githubActor":"","githubAction":"","parameters":{"description":"already quoted"},"messageAttributes":"","modifiedFiles":[]}',
+      TopicArn: 'arn:aws:sns:us-west-2:123456789123:spinnaker-github-actions'
+    }
+
+    // Act
+    await run()
+
+    // Assert
+    expect(SNSClient).toBeCalledWith({ region })
+    expect(PublishCommand).toBeCalledWith(input)
+    expect(mockedSend).toBeCalledTimes(1)
+    expect(mockedGetCommit).not.toHaveBeenCalled()
+  })
+
   describe('when github_token is present', () => {
     beforeEach(() => {
       process.env.INPUT_GITHUB_TOKEN = 'token'
