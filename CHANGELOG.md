@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/compare/v1.2.3...v1.2.4) (2026-04-20)
+
+
+### Bug Fixes
+
+* single-quote parameter values to handle YAML special characters ([f30889a](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/commit/f30889a140960e1c92f154f3d468ba3be6394d1b))
+
 ## [1.2.3](https://github.com/ExpediaGroup/spinnaker-pipeline-trigger/compare/v1.2.2...v1.2.3) (2026-04-14)
 
 
