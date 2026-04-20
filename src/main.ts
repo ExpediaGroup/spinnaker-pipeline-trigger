@@ -17,18 +17,46 @@ limitations under the License.
 import * as core from '@actions/core'
 import * as github from '@actions/github'
 import * as yaml from 'js-yaml'
-import {
-  PublishCommand,
-  PublishInput,
-  SNSServiceException,
-  SNSClient
-} from '@aws-sdk/client-sns'
+import { PublishCommand, PublishInput, SNSClient } from '@aws-sdk/client-sns'
 
 const SNS_MESSAGE_SIZE_LIMIT_BYTES = 256000
 
 interface GitHubFile {
   filename: string
   status: string
+}
+
+/**
+ * Single-quote parameter values so yaml.load() treats them as literal strings.
+ *
+ * Prevents parse errors from `: `, `#`, `{`, `[`, `!`, `&`, `*`, etc.,
+ * silent type conversion of `true`/`false`/`null`/numbers, and silent
+ * truncation from `#` being interpreted as a comment.
+ *
+ * Guards: skip indented lines (block scalar continuations), block scalar
+ * indicators (|, >), and values already wrapped in matching quotes.
+ */
+function quoteParameterValues(raw: string): string {
+  return raw
+    .split('\n')
+    .map(line => {
+      // Skip indented continuation lines (part of multi-line block scalars)
+      if (/^\s/.test(line)) return line
+
+      const idx = line.indexOf(': ')
+      if (idx === -1) return line
+      const key = line.substring(0, idx + 2)
+      const value = line.substring(idx + 2)
+
+      // Don't quote block scalar indicators (|, >, |-, >+, |2, etc.)
+      if (/^[|>][-+]?\d*[-+]?\s*$/.test(value)) return line
+
+      // Don't quote values already wrapped in matching quotes
+      if (/^'.*'$/.test(value) || /^".*"$/.test(value)) return line
+
+      return `${key}'${value.replace(/'/g, "''")}'`
+    })
+    .join('\n')
 }
 
 async function publish(
@@ -61,7 +89,8 @@ async function constructMessage(): Promise<object> {
   const githubAction = process.env.GITHUB_ACTION || ''
   const githubEventName = process.env.GITHUB_EVENT_NAME || ''
   const githubActor = process.env.GITHUB_ACTOR || ''
-  const parameters = yaml.load(core.getInput('parameters')) || {}
+  const rawParameters = core.getInput('parameters')
+  const parameters = yaml.load(quoteParameterValues(rawParameters)) || {}
   const messageAttributes = core.getInput('message_attributes') || ''
   const modifiedFiles = await getModifiedFiles()
 
@@ -130,7 +159,7 @@ export async function run(): Promise<void> {
     core.debug(JSON.stringify(message))
     await publish(message, topicArn, region)
   } catch (error) {
-    if (error instanceof SNSServiceException) core.warning(error.message)
+    if (error instanceof Error) core.warning(error.message)
     core.setFailed('Failed to publish message.')
   }
 }
