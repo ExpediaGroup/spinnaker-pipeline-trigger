@@ -44,7 +44,7 @@ The action sends the following information in the payload:
 
 ### Additional Parameters
 
-To pass additional parameters to the pipeline execution context, include the `parameters` input. Each key/value pair will be passed to Spinnaker and can be used in pipeline steps.
+To pass additional parameters to the pipeline execution context, include the `parameters` input. Each key/value pair will be passed as strings to Spinnaker and can be used in pipeline steps.
 
 ```yaml
 steps:
@@ -55,7 +55,24 @@ steps:
       topic_arn: ${{ secrets.SPINNAKER_TOPIC_ARN }}
       parameters: |
         parameter1: value1
+        parameter2: value2
 ```
+
+> [!IMPORTANT]
+> **Breaking change (v1.2.4):**
+> All parameter values are now strings, aligning with [Spinnaker's parameter model](https://spinnaker.io/docs/reference/pipeline/expressions/#comparisons).
+> Previously, values like `true` or `42` were sent as JSON booleans/numbers due to implicit YAML type coercion.
+> If your Spinnaker SpEL expressions compare parameters to non-string types, update them:
+>
+> ```
+> # Before (no longer works)
+> ${parameters.myParameter == true}
+>
+> # After (use string comparison or Spinnaker's type helpers)
+> ${parameters.myParameter == 'true'}
+> ${#toBoolean(parameters.myParameter) == true}
+> ```
+
 
 Parameters are automatically added to `Parameters` of the pipeline. There is no need to define them separately.
 
